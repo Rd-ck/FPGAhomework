@@ -1,0 +1,95 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dG:/verilog/study/count60_8421/simulation/modelsim
+T_opt
+!s110 1649168027
+V^9KP5O::UaWFzfd1]WAma2
+Z1 04 20 4 work count60_8421_vlg_tst fast 0
+=1-b025aa3038a4-624c4e9b-317-fd4
+Z2 o-quiet -auto_acc_if_foreign -work work -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cycloneive_ver -L rtl_work -L work +acc
+Z3 tCvgOpt 0
+n@_opt
+Z4 OL;O;10.5;63
+R0
+T_opt1
+!s110 1649255671
+VR[klHlh2cNU3M@M:07VbE0
+R1
+=1-b025aa3038a4-624da4f7-115-43ec
+R2
+R3
+n@_opt1
+R4
+vcount60_8421
+Z5 !s110 1649255670
+!i10b 1
+!s100 d1maRR4XW]FeRNRQ_H5F^0
+In_0KL1XiFXDTYNfGG93?K2
+Z6 VDg1SIo80bB@j0V0VzS_@n1
+R0
+w1649251381
+8G:/verilog/study/count60_8421/count60_8421.v
+FG:/verilog/study/count60_8421/count60_8421.v
+L0 1
+Z7 OL;L;10.5;63
+r1
+!s85 0
+31
+Z8 !s108 1649255670.000000
+!s107 G:/verilog/study/count60_8421/count60_8421.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+G:/verilog/study/count60_8421|G:/verilog/study/count60_8421/count60_8421.v|
+!i113 0
+Z9 o-vlog01compat -work work -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+Z10 !s92 -vlog01compat -work work +incdir+G:/verilog/study/count60_8421 -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+R3
+vcount60_8421_vlg_tst
+R5
+!i10b 1
+!s100 6RU1Klm6RQ6EH:T41@N7z0
+ID4faHk22HCR_O:0SID4CH0
+R6
+R0
+w1649255604
+8G:/verilog/study/count60_8421/simulation/modelsim/count60_8421.vt
+FG:/verilog/study/count60_8421/simulation/modelsim/count60_8421.vt
+L0 28
+R7
+r1
+!s85 0
+31
+R8
+!s107 G:/verilog/study/count60_8421/simulation/modelsim/count60_8421.vt|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+G:/verilog/study/count60_8421/simulation/modelsim|G:/verilog/study/count60_8421/simulation/modelsim/count60_8421.vt|
+!i113 0
+R9
+!s92 -vlog01compat -work work +incdir+G:/verilog/study/count60_8421/simulation/modelsim -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+R3
+vcounter8421
+R5
+!i10b 1
+!s100 ]0^eY4?<KQ@^[`Xlinb>41
+IgN1j2Az[Y17?IO4QzH:S93
+R6
+R0
+w1649251334
+8G:/verilog/study/count60_8421/count8421.v
+FG:/verilog/study/count60_8421/count8421.v
+L0 1
+R7
+r1
+!s85 0
+31
+R8
+!s107 G:/verilog/study/count60_8421/count8421.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+G:/verilog/study/count60_8421|G:/verilog/study/count60_8421/count8421.v|
+!i113 0
+R9
+R10
+R3

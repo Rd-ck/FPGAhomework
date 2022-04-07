@@ -1,0 +1,125 @@
+------------------------------------------------------------
+Timing Analyzer Summary
+------------------------------------------------------------
+
+Type  : Slow 1000mV 85C Model Setup 'clk'
+Slack : -1.989
+TNS   : -16.965
+
+Type  : Slow 1000mV 85C Model Setup 'counter8421:one|qout[0]'
+Slack : -0.981
+TNS   : -3.806
+
+Type  : Slow 1000mV 85C Model Hold 'clk'
+Slack : 0.417
+TNS   : 0.000
+
+Type  : Slow 1000mV 85C Model Hold 'counter8421:one|qout[0]'
+Slack : 0.940
+TNS   : 0.000
+
+Type  : Slow 1000mV 85C Model Recovery 'clk'
+Slack : -4.569
+TNS   : -17.081
+
+Type  : Slow 1000mV 85C Model Recovery 'counter8421:one|qout[0]'
+Slack : -2.142
+TNS   : -8.568
+
+Type  : Slow 1000mV 85C Model Removal 'counter8421:one|qout[0]'
+Slack : 1.306
+TNS   : 0.000
+
+Type  : Slow 1000mV 85C Model Removal 'clk'
+Slack : 2.670
+TNS   : 0.000
+
+Type  : Slow 1000mV 85C Model Minimum Pulse Width 'clk'
+Slack : -3.000
+TNS   : -24.156
+
+Type  : Slow 1000mV 85C Model Minimum Pulse Width 'counter8421:one|qout[0]'
+Slack : -1.763
+TNS   : -7.052
+
+Type  : Slow 1000mV 0C Model Setup 'clk'
+Slack : -1.867
+TNS   : -16.168
+
+Type  : Slow 1000mV 0C Model Setup 'counter8421:one|qout[0]'
+Slack : -0.930
+TNS   : -3.608
+
+Type  : Slow 1000mV 0C Model Hold 'clk'
+Slack : 0.481
+TNS   : 0.000
+
+Type  : Slow 1000mV 0C Model Hold 'counter8421:one|qout[0]'
+Slack : 0.907
+TNS   : 0.000
+
+Type  : Slow 1000mV 0C Model Recovery 'clk'
+Slack : -4.368
+TNS   : -16.432
+
+Type  : Slow 1000mV 0C Model Recovery 'counter8421:one|qout[0]'
+Slack : -2.161
+TNS   : -8.644
+
+Type  : Slow 1000mV 0C Model Removal 'counter8421:one|qout[0]'
+Slack : 1.365
+TNS   : 0.000
+
+Type  : Slow 1000mV 0C Model Removal 'clk'
+Slack : 2.660
+TNS   : 0.000
+
+Type  : Slow 1000mV 0C Model Minimum Pulse Width 'clk'
+Slack : -3.000
+TNS   : -24.156
+
+Type  : Slow 1000mV 0C Model Minimum Pulse Width 'counter8421:one|qout[0]'
+Slack : -1.763
+TNS   : -7.052
+
+Type  : Fast 1000mV 0C Model Setup 'clk'
+Slack : -0.887
+TNS   : -6.467
+
+Type  : Fast 1000mV 0C Model Setup 'counter8421:one|qout[0]'
+Slack : -0.109
+TNS   : -0.363
+
+Type  : Fast 1000mV 0C Model Hold 'clk'
+Slack : 0.439
+TNS   : 0.000
+
+Type  : Fast 1000mV 0C Model Hold 'counter8421:one|qout[0]'
+Slack : 0.509
+TNS   : 0.000
+
+Type  : Fast 1000mV 0C Model Recovery 'clk'
+Slack : -2.249
+TNS   : -8.152
+
+Type  : Fast 1000mV 0C Model Recovery 'counter8421:one|qout[0]'
+Slack : -1.001
+TNS   : -4.004
+
+Type  : Fast 1000mV 0C Model Removal 'counter8421:one|qout[0]'
+Slack : 0.923
+TNS   : 0.000
+
+Type  : Fast 1000mV 0C Model Removal 'clk'
+Slack : 1.404
+TNS   : 0.000
+
+Type  : Fast 1000mV 0C Model Minimum Pulse Width 'clk'
+Slack : -3.000
+TNS   : -24.156
+
+Type  : Fast 1000mV 0C Model Minimum Pulse Width 'counter8421:one|qout[0]'
+Slack : -1.763
+TNS   : -7.052
+
+------------------------------------------------------------

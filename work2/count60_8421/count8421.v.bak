@@ -1,0 +1,14 @@
+module couter8421(
+	input rst,clk,
+	output reg[3:0] qout,
+	)
+
+always @(posedge clk or negedge clk)begin
+	if(!rst)qout<=0;
+	else if(qout<9)qout<qout+1'b1;
+	else qout<=0;
+end
+
+endmodule
+
+	

@@ -1,0 +1,16 @@
+module count60(
+	input reset,clk,
+	output reg[5:0] qout,
+	output cout);
+	
+always @(posedge clk or negedge rst)begin
+	if(!reset)qout<=0;
+	else if(qout<59)
+		qout <= qout+1'b1;
+	else
+		qout <=0;
+end
+
+assign cout =(qout==59)?1:0;
+
+endmodule

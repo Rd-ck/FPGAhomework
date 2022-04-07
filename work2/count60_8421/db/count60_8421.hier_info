@@ -1,0 +1,53 @@
+|count60_8421
+rst => qout[0]~reg0.ACLR
+rst => qout[1]~reg0.ACLR
+rst => qout[2]~reg0.ACLR
+rst => qout[3]~reg0.ACLR
+rst => qout[4]~reg0.ACLR
+rst => qout[5]~reg0.ACLR
+rst => qout[6]~reg0.ACLR
+rst => qout[7]~reg0.ACLR
+clk => clk.IN1
+qout[0] << qout[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+qout[1] << qout[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+qout[2] << qout[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+qout[3] << qout[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+qout[4] << qout[4]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+qout[5] << qout[5]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+qout[6] << qout[6]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+qout[7] << qout[7]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+cout << cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|count60_8421|counter8421:one
+rst => qout[0]~reg0.ACLR
+rst => qout[1]~reg0.ACLR
+rst => qout[2]~reg0.ACLR
+rst => qout[3]~reg0.ACLR
+clk => qout[0]~reg0.CLK
+clk => qout[1]~reg0.CLK
+clk => qout[2]~reg0.CLK
+clk => qout[3]~reg0.CLK
+qout[0] <= qout[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+qout[1] <= qout[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+qout[2] <= qout[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+qout[3] <= qout[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+cout <= Equal0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|count60_8421|counter8421:ten
+rst => qout[0]~reg0.ACLR
+rst => qout[1]~reg0.ACLR
+rst => qout[2]~reg0.ACLR
+rst => qout[3]~reg0.ACLR
+clk => qout[0]~reg0.CLK
+clk => qout[1]~reg0.CLK
+clk => qout[2]~reg0.CLK
+clk => qout[3]~reg0.CLK
+qout[0] <= qout[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+qout[1] <= qout[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+qout[2] <= qout[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+qout[3] <= qout[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+cout <= Equal0.DB_MAX_OUTPUT_PORT_TYPE
+
+
