@@ -1,0 +1,115 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dG:/verilog/study/count60_8421/simulation/modelsim
+T_opt
+!s110 1649168027
+V^9KP5O::UaWFzfd1]WAma2
+Z1 04 20 4 work count60_8421_vlg_tst fast 0
+=1-b025aa3038a4-624c4e9b-317-fd4
+Z2 o-quiet -auto_acc_if_foreign -work work -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cycloneive_ver -L rtl_work -L work +acc
+Z3 tCvgOpt 0
+n@_opt
+Z4 OL;O;10.5;63
+R0
+T_opt1
+!s110 1649822242
+VfSdnNVD7GeM_3HZobCY]i0
+R1
+=1-b025aa3038a4-62564a21-35e-1978
+R2
+R3
+n@_opt1
+R4
+R0
+T_opt2
+!s110 1649822302
+VAHkA5Fo:kmNSC;ICT;[F32
+R1
+=1-b025aa3038a4-62564a5e-1be-2320
+R2
+R3
+n@_opt2
+R4
+R0
+T_opt3
+!s110 1649822365
+VDi5TGiY7QPRHD7T[djhZ>1
+R1
+=1-b025aa3038a4-62564a9c-386-11ac
+R2
+R3
+n@_opt3
+R4
+vcount60_8421
+Z5 !s110 1649822364
+!i10b 1
+!s100 d1maRR4XW]FeRNRQ_H5F^0
+IjmJ]<=Kn3L4_K]4BZ?HAR0
+Z6 VDg1SIo80bB@j0V0VzS_@n1
+Z7 dG:/verilog/study/experiment2/count60_8421/simulation/modelsim
+w1649251381
+8G:/verilog/study/experiment2/count60_8421/count60_8421.v
+FG:/verilog/study/experiment2/count60_8421/count60_8421.v
+L0 1
+Z8 OL;L;10.5;63
+r1
+!s85 0
+31
+Z9 !s108 1649822364.000000
+!s107 G:/verilog/study/experiment2/count60_8421/count60_8421.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+G:/verilog/study/experiment2/count60_8421|G:/verilog/study/experiment2/count60_8421/count60_8421.v|
+!i113 0
+Z10 o-vlog01compat -work work -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+Z11 !s92 -vlog01compat -work work +incdir+G:/verilog/study/experiment2/count60_8421 -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+R3
+vcount60_8421_vlg_tst
+R5
+!i10b 1
+!s100 6dZo>OV]34S=8hQanXXo53
+IA?]`6TEo^TLbeJj[_a[H80
+R6
+R7
+w1649255741
+8G:/verilog/study/experiment2/count60_8421/simulation/modelsim/count60_8421.vt
+FG:/verilog/study/experiment2/count60_8421/simulation/modelsim/count60_8421.vt
+L0 28
+R8
+r1
+!s85 0
+31
+R9
+!s107 G:/verilog/study/experiment2/count60_8421/simulation/modelsim/count60_8421.vt|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+G:/verilog/study/experiment2/count60_8421/simulation/modelsim|G:/verilog/study/experiment2/count60_8421/simulation/modelsim/count60_8421.vt|
+!i113 0
+R10
+!s92 -vlog01compat -work work +incdir+G:/verilog/study/experiment2/count60_8421/simulation/modelsim -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+R3
+vcounter8421
+R5
+!i10b 1
+!s100 ]0^eY4?<KQ@^[`Xlinb>41
+IH^O9ON_g9Q;>ze`RQ33gz2
+R6
+R7
+w1649251334
+8G:/verilog/study/experiment2/count60_8421/count8421.v
+FG:/verilog/study/experiment2/count60_8421/count8421.v
+L0 1
+R8
+r1
+!s85 0
+31
+R9
+!s107 G:/verilog/study/experiment2/count60_8421/count8421.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+G:/verilog/study/experiment2/count60_8421|G:/verilog/study/experiment2/count60_8421/count8421.v|
+!i113 0
+R10
+R11
+R3

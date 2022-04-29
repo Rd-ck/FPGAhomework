@@ -1,0 +1,1525 @@
+Timing Analyzer report for count60_8421
+Wed Apr 13 11:59:02 2022
+Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Standard Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Timing Analyzer Summary
+  3. Parallel Compilation
+  4. Clocks
+  5. Slow 1000mV 85C Model Fmax Summary
+  6. Timing Closure Recommendations
+  7. Slow 1000mV 85C Model Setup Summary
+  8. Slow 1000mV 85C Model Hold Summary
+  9. Slow 1000mV 85C Model Recovery Summary
+ 10. Slow 1000mV 85C Model Removal Summary
+ 11. Slow 1000mV 85C Model Minimum Pulse Width Summary
+ 12. Slow 1000mV 85C Model Setup: 'clk'
+ 13. Slow 1000mV 85C Model Setup: 'counter8421:one|qout[0]'
+ 14. Slow 1000mV 85C Model Hold: 'clk'
+ 15. Slow 1000mV 85C Model Hold: 'counter8421:one|qout[0]'
+ 16. Slow 1000mV 85C Model Recovery: 'clk'
+ 17. Slow 1000mV 85C Model Recovery: 'counter8421:one|qout[0]'
+ 18. Slow 1000mV 85C Model Removal: 'counter8421:one|qout[0]'
+ 19. Slow 1000mV 85C Model Removal: 'clk'
+ 20. Slow 1000mV 85C Model Metastability Summary
+ 21. Slow 1000mV 0C Model Fmax Summary
+ 22. Slow 1000mV 0C Model Setup Summary
+ 23. Slow 1000mV 0C Model Hold Summary
+ 24. Slow 1000mV 0C Model Recovery Summary
+ 25. Slow 1000mV 0C Model Removal Summary
+ 26. Slow 1000mV 0C Model Minimum Pulse Width Summary
+ 27. Slow 1000mV 0C Model Setup: 'clk'
+ 28. Slow 1000mV 0C Model Setup: 'counter8421:one|qout[0]'
+ 29. Slow 1000mV 0C Model Hold: 'clk'
+ 30. Slow 1000mV 0C Model Hold: 'counter8421:one|qout[0]'
+ 31. Slow 1000mV 0C Model Recovery: 'clk'
+ 32. Slow 1000mV 0C Model Recovery: 'counter8421:one|qout[0]'
+ 33. Slow 1000mV 0C Model Removal: 'counter8421:one|qout[0]'
+ 34. Slow 1000mV 0C Model Removal: 'clk'
+ 35. Slow 1000mV 0C Model Metastability Summary
+ 36. Fast 1000mV 0C Model Setup Summary
+ 37. Fast 1000mV 0C Model Hold Summary
+ 38. Fast 1000mV 0C Model Recovery Summary
+ 39. Fast 1000mV 0C Model Removal Summary
+ 40. Fast 1000mV 0C Model Minimum Pulse Width Summary
+ 41. Fast 1000mV 0C Model Setup: 'clk'
+ 42. Fast 1000mV 0C Model Setup: 'counter8421:one|qout[0]'
+ 43. Fast 1000mV 0C Model Hold: 'clk'
+ 44. Fast 1000mV 0C Model Hold: 'counter8421:one|qout[0]'
+ 45. Fast 1000mV 0C Model Recovery: 'clk'
+ 46. Fast 1000mV 0C Model Recovery: 'counter8421:one|qout[0]'
+ 47. Fast 1000mV 0C Model Removal: 'counter8421:one|qout[0]'
+ 48. Fast 1000mV 0C Model Removal: 'clk'
+ 49. Fast 1000mV 0C Model Metastability Summary
+ 50. Multicorner Timing Analysis Summary
+ 51. Board Trace Model Assignments
+ 52. Input Transition Times
+ 53. Signal Integrity Metrics (Slow 1000mv 0c Model)
+ 54. Signal Integrity Metrics (Slow 1000mv 85c Model)
+ 55. Signal Integrity Metrics (Fast 1000mv 0c Model)
+ 56. Setup Transfers
+ 57. Hold Transfers
+ 58. Recovery Transfers
+ 59. Removal Transfers
+ 60. Report TCCS
+ 61. Report RSKM
+ 62. Unconstrained Paths Summary
+ 63. Clock Status Summary
+ 64. Unconstrained Input Ports
+ 65. Unconstrained Output Ports
+ 66. Unconstrained Input Ports
+ 67. Unconstrained Output Ports
+ 68. Timing Analyzer Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 2018  Intel Corporation. All rights reserved.
+Your use of Intel Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Intel Program License 
+Subscription Agreement, the Intel Quartus Prime License Agreement,
+the Intel FPGA IP License Agreement, or other applicable license
+agreement, including, without limitation, that your use is for
+the sole purpose of programming logic devices manufactured by
+Intel and sold by Intel or its authorized distributors.  Please
+refer to the applicable agreement for further details.
+
+
+
++---------------------------------------------------------------------------------+
+; Timing Analyzer Summary                                                         ;
++-----------------------+---------------------------------------------------------+
+; Quartus Prime Version ; Version 18.1.0 Build 625 09/12/2018 SJ Standard Edition ;
+; Timing Analyzer       ; Legacy Timing Analyzer                                  ;
+; Revision Name         ; count60_8421                                            ;
+; Device Family         ; Cyclone IV E                                            ;
+; Device Name           ; EP4CE115F23C8L                                          ;
+; Timing Models         ; Final                                                   ;
+; Delay Model           ; Combined                                                ;
+; Rise/Fall Delays      ; Enabled                                                 ;
++-----------------------+---------------------------------------------------------+
+
+
++------------------------------------------+
+; Parallel Compilation                     ;
++----------------------------+-------------+
+; Processors                 ; Number      ;
++----------------------------+-------------+
+; Number detected on machine ; 12          ;
+; Maximum allowed            ; 6           ;
+;                            ;             ;
+; Average used               ; 1.03        ;
+; Maximum used               ; 6           ;
+;                            ;             ;
+; Usage by Processor         ; % Time Used ;
+;     Processor 1            ; 100.0%      ;
+;     Processor 2            ;   0.7%      ;
+;     Processors 3-6         ;   0.5%      ;
++----------------------------+-------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Clocks                                                                                                                                                                                                           ;
++-------------------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+-----------------------------+
+; Clock Name              ; Type ; Period ; Frequency  ; Rise  ; Fall  ; Duty Cycle ; Divide by ; Multiply by ; Phase ; Offset ; Edge List ; Edge Shift ; Inverted ; Master ; Source ; Targets                     ;
++-------------------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+-----------------------------+
+; clk                     ; Base ; 1.000  ; 1000.0 MHz ; 0.000 ; 0.500 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;        ; { clk }                     ;
+; counter8421:one|qout[0] ; Base ; 1.000  ; 1000.0 MHz ; 0.000 ; 0.500 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;        ; { counter8421:one|qout[0] } ;
++-------------------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+-----------------------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------+
+; Slow 1000mV 85C Model Fmax Summary                                                                                    ;
++-----------+-----------------+-------------------------+---------------------------------------------------------------+
+; Fmax      ; Restricted Fmax ; Clock Name              ; Note                                                          ;
++-----------+-----------------+-------------------------+---------------------------------------------------------------+
+; 342.0 MHz ; 250.0 MHz       ; clk                     ; limit due to minimum period restriction (max I/O toggle rate) ;
+; 504.8 MHz ; 361.93 MHz      ; counter8421:one|qout[0] ; limit due to minimum period restriction (tmin)                ;
++-----------+-----------------+-------------------------+---------------------------------------------------------------+
+This panel reports FMAX for every clock in the design, regardless of the user-specified clock periods.  FMAX is only computed for paths where the source and destination registers or ports are driven by the same clock.  Paths of different clocks, including generated clocks, are ignored.  For paths between a clock and its inversion, FMAX is computed as if the rising and falling edges are scaled along with FMAX, such that the duty cycle (in terms of a percentage) is maintained. Altera recommends that you always use clock constraints and other slack reports for sign-off analysis.
+
+
+----------------------------------
+; Timing Closure Recommendations ;
+----------------------------------
+HTML report is unavailable in plain text report export.
+
+
++--------------------------------------------------+
+; Slow 1000mV 85C Model Setup Summary              ;
++-------------------------+--------+---------------+
+; Clock                   ; Slack  ; End Point TNS ;
++-------------------------+--------+---------------+
+; clk                     ; -1.989 ; -16.965       ;
+; counter8421:one|qout[0] ; -0.981 ; -3.806        ;
++-------------------------+--------+---------------+
+
+
++-------------------------------------------------+
+; Slow 1000mV 85C Model Hold Summary              ;
++-------------------------+-------+---------------+
+; Clock                   ; Slack ; End Point TNS ;
++-------------------------+-------+---------------+
+; clk                     ; 0.417 ; 0.000         ;
+; counter8421:one|qout[0] ; 0.940 ; 0.000         ;
++-------------------------+-------+---------------+
+
+
++--------------------------------------------------+
+; Slow 1000mV 85C Model Recovery Summary           ;
++-------------------------+--------+---------------+
+; Clock                   ; Slack  ; End Point TNS ;
++-------------------------+--------+---------------+
+; clk                     ; -4.569 ; -17.081       ;
+; counter8421:one|qout[0] ; -2.142 ; -8.568        ;
++-------------------------+--------+---------------+
+
+
++-------------------------------------------------+
+; Slow 1000mV 85C Model Removal Summary           ;
++-------------------------+-------+---------------+
+; Clock                   ; Slack ; End Point TNS ;
++-------------------------+-------+---------------+
+; counter8421:one|qout[0] ; 1.306 ; 0.000         ;
+; clk                     ; 2.670 ; 0.000         ;
++-------------------------+-------+---------------+
+
+
++---------------------------------------------------+
+; Slow 1000mV 85C Model Minimum Pulse Width Summary ;
++-------------------------+--------+----------------+
+; Clock                   ; Slack  ; End Point TNS  ;
++-------------------------+--------+----------------+
+; clk                     ; -3.000 ; -24.156        ;
+; counter8421:one|qout[0] ; -1.763 ; -7.052         ;
++-------------------------+--------+----------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------+
+; Slow 1000mV 85C Model Setup: 'clk'                                                                                                          ;
++--------+-------------------------+-------------------------+-------------------------+-------------+--------------+------------+------------+
+; Slack  ; From Node               ; To Node                 ; Launch Clock            ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++--------+-------------------------+-------------------------+-------------------------+-------------+--------------+------------+------------+
+; -1.989 ; counter8421:ten|qout[0] ; qout[4]~reg0            ; counter8421:one|qout[0] ; clk         ; 0.500        ; -1.194     ; 1.290      ;
+; -1.965 ; counter8421:ten|qout[3] ; qout[7]~reg0            ; counter8421:one|qout[0] ; clk         ; 0.500        ; -1.194     ; 1.266      ;
+; -1.943 ; counter8421:ten|qout[2] ; qout[6]~reg0            ; counter8421:one|qout[0] ; clk         ; 0.500        ; -1.194     ; 1.244      ;
+; -1.924 ; counter8421:one|qout[2] ; counter8421:one|qout[2] ; clk                     ; clk         ; 1.000        ; -0.059     ; 2.870      ;
+; -1.921 ; counter8421:one|qout[3] ; counter8421:one|qout[3] ; clk                     ; clk         ; 1.000        ; -0.059     ; 2.867      ;
+; -1.904 ; counter8421:one|qout[2] ; counter8421:one|qout[3] ; clk                     ; clk         ; 1.000        ; -0.059     ; 2.850      ;
+; -1.869 ; counter8421:one|qout[3] ; counter8421:one|qout[2] ; clk                     ; clk         ; 1.000        ; -0.059     ; 2.815      ;
+; -1.834 ; counter8421:one|qout[3] ; counter8421:one|qout[1] ; clk                     ; clk         ; 1.000        ; -0.059     ; 2.780      ;
+; -1.763 ; counter8421:one|qout[3] ; counter8421:one|qout[0] ; clk                     ; clk         ; 1.000        ; 1.075      ; 3.843      ;
+; -1.747 ; counter8421:ten|qout[1] ; qout[5]~reg0            ; counter8421:one|qout[0] ; clk         ; 0.500        ; -1.194     ; 1.048      ;
+; -1.747 ; counter8421:one|qout[2] ; counter8421:one|qout[0] ; clk                     ; clk         ; 1.000        ; 1.075      ; 3.827      ;
+; -1.620 ; counter8421:one|qout[1] ; counter8421:one|qout[0] ; clk                     ; clk         ; 1.000        ; 1.075      ; 3.700      ;
+; -1.591 ; counter8421:one|qout[0] ; counter8421:one|qout[0] ; counter8421:one|qout[0] ; clk         ; 0.500        ; 3.410      ; 5.806      ;
+; -1.513 ; counter8421:one|qout[1] ; counter8421:one|qout[2] ; clk                     ; clk         ; 1.000        ; -0.059     ; 2.459      ;
+; -1.510 ; counter8421:one|qout[1] ; counter8421:one|qout[1] ; clk                     ; clk         ; 1.000        ; -0.059     ; 2.456      ;
+; -1.502 ; counter8421:one|qout[1] ; counter8421:one|qout[3] ; clk                     ; clk         ; 1.000        ; -0.059     ; 2.448      ;
+; -1.432 ; counter8421:one|qout[0] ; qout[0]~reg0            ; counter8421:one|qout[0] ; clk         ; 0.500        ; 3.454      ; 5.691      ;
+; -1.377 ; counter8421:one|qout[0] ; counter8421:one|qout[1] ; counter8421:one|qout[0] ; clk         ; 0.500        ; 2.250      ; 4.432      ;
+; -1.370 ; counter8421:one|qout[0] ; counter8421:one|qout[2] ; counter8421:one|qout[0] ; clk         ; 0.500        ; 2.250      ; 4.425      ;
+; -1.342 ; counter8421:one|qout[0] ; counter8421:one|qout[3] ; counter8421:one|qout[0] ; clk         ; 0.500        ; 2.250      ; 4.397      ;
+; -1.117 ; counter8421:one|qout[0] ; counter8421:one|qout[0] ; counter8421:one|qout[0] ; clk         ; 1.000        ; 3.410      ; 5.832      ;
+; -0.974 ; counter8421:one|qout[0] ; qout[0]~reg0            ; counter8421:one|qout[0] ; clk         ; 1.000        ; 3.454      ; 5.733      ;
+; -0.887 ; counter8421:one|qout[0] ; counter8421:one|qout[1] ; counter8421:one|qout[0] ; clk         ; 1.000        ; 2.250      ; 4.442      ;
+; -0.881 ; counter8421:one|qout[0] ; counter8421:one|qout[2] ; counter8421:one|qout[0] ; clk         ; 1.000        ; 2.250      ; 4.436      ;
+; -0.846 ; counter8421:one|qout[0] ; counter8421:one|qout[3] ; counter8421:one|qout[0] ; clk         ; 1.000        ; 2.250      ; 4.401      ;
+; -0.216 ; counter8421:one|qout[1] ; qout[1]~reg0            ; clk                     ; clk         ; 0.500        ; 1.119      ; 1.840      ;
+; -0.207 ; counter8421:one|qout[2] ; qout[2]~reg0            ; clk                     ; clk         ; 0.500        ; 1.119      ; 1.831      ;
+; -0.024 ; counter8421:one|qout[3] ; qout[3]~reg0            ; clk                     ; clk         ; 0.500        ; 1.119      ; 1.648      ;
++--------+-------------------------+-------------------------+-------------------------+-------------+--------------+------------+------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Slow 1000mV 85C Model Setup: 'counter8421:one|qout[0]'                                                                                                  ;
++--------+-------------------------+-------------------------+-------------------------+-------------------------+--------------+------------+------------+
+; Slack  ; From Node               ; To Node                 ; Launch Clock            ; Latch Clock             ; Relationship ; Clock Skew ; Data Delay ;
++--------+-------------------------+-------------------------+-------------------------+-------------------------+--------------+------------+------------+
+; -0.981 ; counter8421:ten|qout[0] ; counter8421:ten|qout[1] ; counter8421:one|qout[0] ; counter8421:one|qout[0] ; 1.000        ; -0.099     ; 1.887      ;
+; -0.977 ; counter8421:ten|qout[3] ; counter8421:ten|qout[3] ; counter8421:one|qout[0] ; counter8421:one|qout[0] ; 1.000        ; -0.099     ; 1.883      ;
+; -0.961 ; counter8421:ten|qout[3] ; counter8421:ten|qout[1] ; counter8421:one|qout[0] ; counter8421:one|qout[0] ; 1.000        ; -0.099     ; 1.867      ;
+; -0.945 ; counter8421:ten|qout[3] ; counter8421:ten|qout[2] ; counter8421:one|qout[0] ; counter8421:one|qout[0] ; 1.000        ; -0.099     ; 1.851      ;
+; -0.943 ; counter8421:ten|qout[2] ; counter8421:ten|qout[3] ; counter8421:one|qout[0] ; counter8421:one|qout[0] ; 1.000        ; -0.099     ; 1.849      ;
+; -0.903 ; counter8421:ten|qout[1] ; counter8421:ten|qout[0] ; counter8421:one|qout[0] ; counter8421:one|qout[0] ; 1.000        ; -0.099     ; 1.809      ;
+; -0.887 ; counter8421:ten|qout[2] ; counter8421:ten|qout[0] ; counter8421:one|qout[0] ; counter8421:one|qout[0] ; 1.000        ; -0.099     ; 1.793      ;
+; -0.885 ; counter8421:ten|qout[0] ; counter8421:ten|qout[2] ; counter8421:one|qout[0] ; counter8421:one|qout[0] ; 1.000        ; -0.099     ; 1.791      ;
+; -0.783 ; counter8421:ten|qout[0] ; counter8421:ten|qout[3] ; counter8421:one|qout[0] ; counter8421:one|qout[0] ; 1.000        ; -0.099     ; 1.689      ;
+; -0.746 ; counter8421:ten|qout[2] ; counter8421:ten|qout[2] ; counter8421:one|qout[0] ; counter8421:one|qout[0] ; 1.000        ; -0.099     ; 1.652      ;
+; -0.723 ; counter8421:ten|qout[3] ; counter8421:ten|qout[0] ; counter8421:one|qout[0] ; counter8421:one|qout[0] ; 1.000        ; -0.099     ; 1.629      ;
+; -0.692 ; counter8421:ten|qout[0] ; counter8421:ten|qout[0] ; counter8421:one|qout[0] ; counter8421:one|qout[0] ; 1.000        ; -0.099     ; 1.598      ;
+; -0.561 ; counter8421:ten|qout[1] ; counter8421:ten|qout[1] ; counter8421:one|qout[0] ; counter8421:one|qout[0] ; 1.000        ; -0.099     ; 1.467      ;
+; -0.559 ; counter8421:ten|qout[1] ; counter8421:ten|qout[3] ; counter8421:one|qout[0] ; counter8421:one|qout[0] ; 1.000        ; -0.099     ; 1.465      ;
+; -0.556 ; counter8421:ten|qout[1] ; counter8421:ten|qout[2] ; counter8421:one|qout[0] ; counter8421:one|qout[0] ; 1.000        ; -0.099     ; 1.462      ;
++--------+-------------------------+-------------------------+-------------------------+-------------------------+--------------+------------+------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------+
+; Slow 1000mV 85C Model Hold: 'clk'                                                                                                          ;
++-------+-------------------------+-------------------------+-------------------------+-------------+--------------+------------+------------+
+; Slack ; From Node               ; To Node                 ; Launch Clock            ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++-------+-------------------------+-------------------------+-------------------------+-------------+--------------+------------+------------+
+; 0.417 ; counter8421:one|qout[1] ; qout[1]~reg0            ; clk                     ; clk         ; -0.500       ; 1.337      ; 1.518      ;
+; 0.444 ; counter8421:one|qout[3] ; qout[3]~reg0            ; clk                     ; clk         ; -0.500       ; 1.337      ; 1.545      ;
+; 0.617 ; counter8421:one|qout[2] ; qout[2]~reg0            ; clk                     ; clk         ; -0.500       ; 1.337      ; 1.718      ;
+; 1.134 ; counter8421:one|qout[0] ; counter8421:one|qout[1] ; counter8421:one|qout[0] ; clk         ; 0.000        ; 2.335      ; 4.053      ;
+; 1.135 ; counter8421:one|qout[0] ; counter8421:one|qout[2] ; counter8421:one|qout[0] ; clk         ; 0.000        ; 2.335      ; 4.054      ;
+; 1.259 ; counter8421:one|qout[0] ; counter8421:one|qout[3] ; counter8421:one|qout[0] ; clk         ; 0.000        ; 2.335      ; 4.178      ;
+; 1.345 ; counter8421:one|qout[0] ; qout[0]~reg0            ; counter8421:one|qout[0] ; clk         ; 0.000        ; 3.587      ; 5.516      ;
+; 1.464 ; counter8421:one|qout[0] ; counter8421:one|qout[0] ; counter8421:one|qout[0] ; clk         ; 0.000        ; 3.543      ; 5.591      ;
+; 1.667 ; counter8421:one|qout[0] ; counter8421:one|qout[2] ; counter8421:one|qout[0] ; clk         ; -0.500       ; 2.335      ; 4.086      ;
+; 1.668 ; counter8421:one|qout[0] ; counter8421:one|qout[1] ; counter8421:one|qout[0] ; clk         ; -0.500       ; 2.335      ; 4.087      ;
+; 1.772 ; counter8421:one|qout[0] ; counter8421:one|qout[3] ; counter8421:one|qout[0] ; clk         ; -0.500       ; 2.335      ; 4.191      ;
+; 1.794 ; counter8421:one|qout[1] ; counter8421:one|qout[1] ; clk                     ; clk         ; 0.000        ; 0.059      ; 2.097      ;
+; 1.806 ; counter8421:one|qout[0] ; qout[0]~reg0            ; counter8421:one|qout[0] ; clk         ; -0.500       ; 3.587      ; 5.477      ;
+; 1.806 ; counter8421:one|qout[1] ; counter8421:one|qout[2] ; clk                     ; clk         ; 0.000        ; 0.059      ; 2.109      ;
+; 1.817 ; counter8421:one|qout[1] ; counter8421:one|qout[0] ; clk                     ; clk         ; 0.000        ; 1.293      ; 3.354      ;
+; 1.879 ; counter8421:one|qout[3] ; counter8421:one|qout[0] ; clk                     ; clk         ; 0.000        ; 1.293      ; 3.416      ;
+; 1.918 ; counter8421:one|qout[1] ; counter8421:one|qout[3] ; clk                     ; clk         ; 0.000        ; 0.059      ; 2.221      ;
+; 1.926 ; counter8421:one|qout[0] ; counter8421:one|qout[0] ; counter8421:one|qout[0] ; clk         ; -0.500       ; 3.543      ; 5.553      ;
+; 1.928 ; counter8421:one|qout[2] ; counter8421:one|qout[0] ; clk                     ; clk         ; 0.000        ; 1.293      ; 3.465      ;
+; 1.980 ; counter8421:ten|qout[1] ; qout[5]~reg0            ; counter8421:one|qout[0] ; clk         ; -0.500       ; -0.853     ; 0.901      ;
+; 2.061 ; counter8421:one|qout[2] ; counter8421:one|qout[2] ; clk                     ; clk         ; 0.000        ; 0.059      ; 2.364      ;
+; 2.109 ; counter8421:one|qout[3] ; counter8421:one|qout[2] ; clk                     ; clk         ; 0.000        ; 0.059      ; 2.412      ;
+; 2.117 ; counter8421:one|qout[3] ; counter8421:one|qout[1] ; clk                     ; clk         ; 0.000        ; 0.059      ; 2.420      ;
+; 2.119 ; counter8421:ten|qout[2] ; qout[6]~reg0            ; counter8421:one|qout[0] ; clk         ; -0.500       ; -0.853     ; 1.040      ;
+; 2.132 ; counter8421:ten|qout[3] ; qout[7]~reg0            ; counter8421:one|qout[0] ; clk         ; -0.500       ; -0.853     ; 1.053      ;
+; 2.190 ; counter8421:one|qout[2] ; counter8421:one|qout[3] ; clk                     ; clk         ; 0.000        ; 0.059      ; 2.493      ;
+; 2.239 ; counter8421:ten|qout[0] ; qout[4]~reg0            ; counter8421:one|qout[0] ; clk         ; -0.500       ; -0.853     ; 1.160      ;
+; 2.257 ; counter8421:one|qout[3] ; counter8421:one|qout[3] ; clk                     ; clk         ; 0.000        ; 0.059      ; 2.560      ;
++-------+-------------------------+-------------------------+-------------------------+-------------+--------------+------------+------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Slow 1000mV 85C Model Hold: 'counter8421:one|qout[0]'                                                                                                  ;
++-------+-------------------------+-------------------------+-------------------------+-------------------------+--------------+------------+------------+
+; Slack ; From Node               ; To Node                 ; Launch Clock            ; Latch Clock             ; Relationship ; Clock Skew ; Data Delay ;
++-------+-------------------------+-------------------------+-------------------------+-------------------------+--------------+------------+------------+
+; 0.940 ; counter8421:ten|qout[1] ; counter8421:ten|qout[2] ; counter8421:one|qout[0] ; counter8421:one|qout[0] ; 0.000        ; 0.099      ; 1.283      ;
+; 0.943 ; counter8421:ten|qout[1] ; counter8421:ten|qout[3] ; counter8421:one|qout[0] ; counter8421:one|qout[0] ; 0.000        ; 0.099      ; 1.286      ;
+; 0.946 ; counter8421:ten|qout[1] ; counter8421:ten|qout[1] ; counter8421:one|qout[0] ; counter8421:one|qout[0] ; 0.000        ; 0.099      ; 1.289      ;
+; 1.082 ; counter8421:ten|qout[2] ; counter8421:ten|qout[2] ; counter8421:one|qout[0] ; counter8421:one|qout[0] ; 0.000        ; 0.099      ; 1.425      ;
+; 1.084 ; counter8421:ten|qout[0] ; counter8421:ten|qout[0] ; counter8421:one|qout[0] ; counter8421:one|qout[0] ; 0.000        ; 0.099      ; 1.427      ;
+; 1.093 ; counter8421:ten|qout[3] ; counter8421:ten|qout[0] ; counter8421:one|qout[0] ; counter8421:one|qout[0] ; 0.000        ; 0.099      ; 1.436      ;
+; 1.109 ; counter8421:ten|qout[0] ; counter8421:ten|qout[3] ; counter8421:one|qout[0] ; counter8421:one|qout[0] ; 0.000        ; 0.099      ; 1.452      ;
+; 1.195 ; counter8421:ten|qout[2] ; counter8421:ten|qout[3] ; counter8421:one|qout[0] ; counter8421:one|qout[0] ; 0.000        ; 0.099      ; 1.538      ;
+; 1.221 ; counter8421:ten|qout[0] ; counter8421:ten|qout[2] ; counter8421:one|qout[0] ; counter8421:one|qout[0] ; 0.000        ; 0.099      ; 1.564      ;
+; 1.222 ; counter8421:ten|qout[3] ; counter8421:ten|qout[1] ; counter8421:one|qout[0] ; counter8421:one|qout[0] ; 0.000        ; 0.099      ; 1.565      ;
+; 1.225 ; counter8421:ten|qout[3] ; counter8421:ten|qout[2] ; counter8421:one|qout[0] ; counter8421:one|qout[0] ; 0.000        ; 0.099      ; 1.568      ;
+; 1.249 ; counter8421:ten|qout[0] ; counter8421:ten|qout[1] ; counter8421:one|qout[0] ; counter8421:one|qout[0] ; 0.000        ; 0.099      ; 1.592      ;
+; 1.273 ; counter8421:ten|qout[1] ; counter8421:ten|qout[0] ; counter8421:one|qout[0] ; counter8421:one|qout[0] ; 0.000        ; 0.099      ; 1.616      ;
+; 1.274 ; counter8421:ten|qout[3] ; counter8421:ten|qout[3] ; counter8421:one|qout[0] ; counter8421:one|qout[0] ; 0.000        ; 0.099      ; 1.617      ;
+; 1.275 ; counter8421:ten|qout[2] ; counter8421:ten|qout[0] ; counter8421:one|qout[0] ; counter8421:one|qout[0] ; 0.000        ; 0.099      ; 1.618      ;
++-------+-------------------------+-------------------------+-------------------------+-------------------------+--------------+------------+------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------+
+; Slow 1000mV 85C Model Recovery: 'clk'                                                                                 ;
++--------+--------------+-------------------------+--------------+-------------+--------------+------------+------------+
+; Slack  ; From Node    ; To Node                 ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++--------+--------------+-------------------------+--------------+-------------+--------------+------------+------------+
+; -4.569 ; qout[5]~reg0 ; counter8421:one|qout[2] ; clk          ; clk         ; 0.500        ; -1.337     ; 3.737      ;
+; -4.569 ; qout[5]~reg0 ; counter8421:one|qout[3] ; clk          ; clk         ; 0.500        ; -1.337     ; 3.737      ;
+; -4.569 ; qout[5]~reg0 ; counter8421:one|qout[1] ; clk          ; clk         ; 0.500        ; -1.337     ; 3.737      ;
+; -4.547 ; qout[7]~reg0 ; counter8421:one|qout[2] ; clk          ; clk         ; 0.500        ; -1.337     ; 3.715      ;
+; -4.547 ; qout[7]~reg0 ; counter8421:one|qout[3] ; clk          ; clk         ; 0.500        ; -1.337     ; 3.715      ;
+; -4.547 ; qout[7]~reg0 ; counter8421:one|qout[1] ; clk          ; clk         ; 0.500        ; -1.337     ; 3.715      ;
+; -4.131 ; qout[6]~reg0 ; counter8421:one|qout[2] ; clk          ; clk         ; 0.500        ; -1.337     ; 3.299      ;
+; -4.131 ; qout[6]~reg0 ; counter8421:one|qout[3] ; clk          ; clk         ; 0.500        ; -1.337     ; 3.299      ;
+; -4.131 ; qout[6]~reg0 ; counter8421:one|qout[1] ; clk          ; clk         ; 0.500        ; -1.337     ; 3.299      ;
+; -4.123 ; qout[1]~reg0 ; counter8421:one|qout[2] ; clk          ; clk         ; 0.500        ; -1.337     ; 3.291      ;
+; -4.123 ; qout[1]~reg0 ; counter8421:one|qout[3] ; clk          ; clk         ; 0.500        ; -1.337     ; 3.291      ;
+; -4.123 ; qout[1]~reg0 ; counter8421:one|qout[1] ; clk          ; clk         ; 0.500        ; -1.337     ; 3.291      ;
+; -3.707 ; qout[3]~reg0 ; counter8421:one|qout[2] ; clk          ; clk         ; 0.500        ; -1.337     ; 2.875      ;
+; -3.707 ; qout[3]~reg0 ; counter8421:one|qout[3] ; clk          ; clk         ; 0.500        ; -1.337     ; 2.875      ;
+; -3.707 ; qout[3]~reg0 ; counter8421:one|qout[1] ; clk          ; clk         ; 0.500        ; -1.337     ; 2.875      ;
+; -3.688 ; qout[0]~reg0 ; counter8421:one|qout[2] ; clk          ; clk         ; 0.500        ; -1.337     ; 2.856      ;
+; -3.688 ; qout[0]~reg0 ; counter8421:one|qout[3] ; clk          ; clk         ; 0.500        ; -1.337     ; 2.856      ;
+; -3.688 ; qout[0]~reg0 ; counter8421:one|qout[1] ; clk          ; clk         ; 0.500        ; -1.337     ; 2.856      ;
+; -3.614 ; qout[2]~reg0 ; counter8421:one|qout[2] ; clk          ; clk         ; 0.500        ; -1.337     ; 2.782      ;
+; -3.614 ; qout[2]~reg0 ; counter8421:one|qout[3] ; clk          ; clk         ; 0.500        ; -1.337     ; 2.782      ;
+; -3.614 ; qout[2]~reg0 ; counter8421:one|qout[1] ; clk          ; clk         ; 0.500        ; -1.337     ; 2.782      ;
+; -3.612 ; qout[4]~reg0 ; counter8421:one|qout[2] ; clk          ; clk         ; 0.500        ; -1.337     ; 2.780      ;
+; -3.612 ; qout[4]~reg0 ; counter8421:one|qout[3] ; clk          ; clk         ; 0.500        ; -1.337     ; 2.780      ;
+; -3.612 ; qout[4]~reg0 ; counter8421:one|qout[1] ; clk          ; clk         ; 0.500        ; -1.337     ; 2.780      ;
+; -3.374 ; qout[5]~reg0 ; counter8421:one|qout[0] ; clk          ; clk         ; 0.500        ; -0.142     ; 3.737      ;
+; -3.352 ; qout[7]~reg0 ; counter8421:one|qout[0] ; clk          ; clk         ; 0.500        ; -0.142     ; 3.715      ;
+; -2.936 ; qout[6]~reg0 ; counter8421:one|qout[0] ; clk          ; clk         ; 0.500        ; -0.142     ; 3.299      ;
+; -2.928 ; qout[1]~reg0 ; counter8421:one|qout[0] ; clk          ; clk         ; 0.500        ; -0.142     ; 3.291      ;
+; -2.512 ; qout[3]~reg0 ; counter8421:one|qout[0] ; clk          ; clk         ; 0.500        ; -0.142     ; 2.875      ;
+; -2.493 ; qout[0]~reg0 ; counter8421:one|qout[0] ; clk          ; clk         ; 0.500        ; -0.142     ; 2.856      ;
+; -2.419 ; qout[2]~reg0 ; counter8421:one|qout[0] ; clk          ; clk         ; 0.500        ; -0.142     ; 2.782      ;
+; -2.417 ; qout[4]~reg0 ; counter8421:one|qout[0] ; clk          ; clk         ; 0.500        ; -0.142     ; 2.780      ;
++--------+--------------+-------------------------+--------------+-------------+--------------+------------+------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------+
+; Slow 1000mV 85C Model Recovery: 'counter8421:one|qout[0]'                                                                         ;
++--------+--------------+-------------------------+--------------+-------------------------+--------------+------------+------------+
+; Slack  ; From Node    ; To Node                 ; Launch Clock ; Latch Clock             ; Relationship ; Clock Skew ; Data Delay ;
++--------+--------------+-------------------------+--------------+-------------------------+--------------+------------+------------+
+; -2.142 ; qout[5]~reg0 ; counter8421:ten|qout[3] ; clk          ; counter8421:one|qout[0] ; 0.500        ; 0.853      ; 3.490      ;
+; -2.142 ; qout[5]~reg0 ; counter8421:ten|qout[0] ; clk          ; counter8421:one|qout[0] ; 0.500        ; 0.853      ; 3.490      ;
+; -2.142 ; qout[5]~reg0 ; counter8421:ten|qout[1] ; clk          ; counter8421:one|qout[0] ; 0.500        ; 0.853      ; 3.490      ;
+; -2.142 ; qout[5]~reg0 ; counter8421:ten|qout[2] ; clk          ; counter8421:one|qout[0] ; 0.500        ; 0.853      ; 3.490      ;
+; -2.120 ; qout[7]~reg0 ; counter8421:ten|qout[3] ; clk          ; counter8421:one|qout[0] ; 0.500        ; 0.853      ; 3.468      ;
+; -2.120 ; qout[7]~reg0 ; counter8421:ten|qout[0] ; clk          ; counter8421:one|qout[0] ; 0.500        ; 0.853      ; 3.468      ;
+; -2.120 ; qout[7]~reg0 ; counter8421:ten|qout[1] ; clk          ; counter8421:one|qout[0] ; 0.500        ; 0.853      ; 3.468      ;
+; -2.120 ; qout[7]~reg0 ; counter8421:ten|qout[2] ; clk          ; counter8421:one|qout[0] ; 0.500        ; 0.853      ; 3.468      ;
+; -1.704 ; qout[6]~reg0 ; counter8421:ten|qout[3] ; clk          ; counter8421:one|qout[0] ; 0.500        ; 0.853      ; 3.052      ;
+; -1.704 ; qout[6]~reg0 ; counter8421:ten|qout[0] ; clk          ; counter8421:one|qout[0] ; 0.500        ; 0.853      ; 3.052      ;
+; -1.704 ; qout[6]~reg0 ; counter8421:ten|qout[1] ; clk          ; counter8421:one|qout[0] ; 0.500        ; 0.853      ; 3.052      ;
+; -1.704 ; qout[6]~reg0 ; counter8421:ten|qout[2] ; clk          ; counter8421:one|qout[0] ; 0.500        ; 0.853      ; 3.052      ;
+; -1.696 ; qout[1]~reg0 ; counter8421:ten|qout[3] ; clk          ; counter8421:one|qout[0] ; 0.500        ; 0.853      ; 3.044      ;
+; -1.696 ; qout[1]~reg0 ; counter8421:ten|qout[0] ; clk          ; counter8421:one|qout[0] ; 0.500        ; 0.853      ; 3.044      ;
+; -1.696 ; qout[1]~reg0 ; counter8421:ten|qout[1] ; clk          ; counter8421:one|qout[0] ; 0.500        ; 0.853      ; 3.044      ;
+; -1.696 ; qout[1]~reg0 ; counter8421:ten|qout[2] ; clk          ; counter8421:one|qout[0] ; 0.500        ; 0.853      ; 3.044      ;
+; -1.280 ; qout[3]~reg0 ; counter8421:ten|qout[3] ; clk          ; counter8421:one|qout[0] ; 0.500        ; 0.853      ; 2.628      ;
+; -1.280 ; qout[3]~reg0 ; counter8421:ten|qout[0] ; clk          ; counter8421:one|qout[0] ; 0.500        ; 0.853      ; 2.628      ;
+; -1.280 ; qout[3]~reg0 ; counter8421:ten|qout[1] ; clk          ; counter8421:one|qout[0] ; 0.500        ; 0.853      ; 2.628      ;
+; -1.280 ; qout[3]~reg0 ; counter8421:ten|qout[2] ; clk          ; counter8421:one|qout[0] ; 0.500        ; 0.853      ; 2.628      ;
+; -1.261 ; qout[0]~reg0 ; counter8421:ten|qout[3] ; clk          ; counter8421:one|qout[0] ; 0.500        ; 0.853      ; 2.609      ;
+; -1.261 ; qout[0]~reg0 ; counter8421:ten|qout[0] ; clk          ; counter8421:one|qout[0] ; 0.500        ; 0.853      ; 2.609      ;
+; -1.261 ; qout[0]~reg0 ; counter8421:ten|qout[1] ; clk          ; counter8421:one|qout[0] ; 0.500        ; 0.853      ; 2.609      ;
+; -1.261 ; qout[0]~reg0 ; counter8421:ten|qout[2] ; clk          ; counter8421:one|qout[0] ; 0.500        ; 0.853      ; 2.609      ;
+; -1.187 ; qout[2]~reg0 ; counter8421:ten|qout[3] ; clk          ; counter8421:one|qout[0] ; 0.500        ; 0.853      ; 2.535      ;
+; -1.187 ; qout[2]~reg0 ; counter8421:ten|qout[0] ; clk          ; counter8421:one|qout[0] ; 0.500        ; 0.853      ; 2.535      ;
+; -1.187 ; qout[2]~reg0 ; counter8421:ten|qout[1] ; clk          ; counter8421:one|qout[0] ; 0.500        ; 0.853      ; 2.535      ;
+; -1.187 ; qout[2]~reg0 ; counter8421:ten|qout[2] ; clk          ; counter8421:one|qout[0] ; 0.500        ; 0.853      ; 2.535      ;
+; -1.185 ; qout[4]~reg0 ; counter8421:ten|qout[3] ; clk          ; counter8421:one|qout[0] ; 0.500        ; 0.853      ; 2.533      ;
+; -1.185 ; qout[4]~reg0 ; counter8421:ten|qout[0] ; clk          ; counter8421:one|qout[0] ; 0.500        ; 0.853      ; 2.533      ;
+; -1.185 ; qout[4]~reg0 ; counter8421:ten|qout[1] ; clk          ; counter8421:one|qout[0] ; 0.500        ; 0.853      ; 2.533      ;
+; -1.185 ; qout[4]~reg0 ; counter8421:ten|qout[2] ; clk          ; counter8421:one|qout[0] ; 0.500        ; 0.853      ; 2.533      ;
++--------+--------------+-------------------------+--------------+-------------------------+--------------+------------+------------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------+
+; Slow 1000mV 85C Model Removal: 'counter8421:one|qout[0]'                                                                         ;
++-------+--------------+-------------------------+--------------+-------------------------+--------------+------------+------------+
+; Slack ; From Node    ; To Node                 ; Launch Clock ; Latch Clock             ; Relationship ; Clock Skew ; Data Delay ;
++-------+--------------+-------------------------+--------------+-------------------------+--------------+------------+------------+
+; 1.306 ; qout[4]~reg0 ; counter8421:ten|qout[3] ; clk          ; counter8421:one|qout[0] ; -0.500       ; 1.194      ; 2.274      ;
+; 1.306 ; qout[4]~reg0 ; counter8421:ten|qout[0] ; clk          ; counter8421:one|qout[0] ; -0.500       ; 1.194      ; 2.274      ;
+; 1.306 ; qout[4]~reg0 ; counter8421:ten|qout[1] ; clk          ; counter8421:one|qout[0] ; -0.500       ; 1.194      ; 2.274      ;
+; 1.306 ; qout[4]~reg0 ; counter8421:ten|qout[2] ; clk          ; counter8421:one|qout[0] ; -0.500       ; 1.194      ; 2.274      ;
+; 1.407 ; qout[3]~reg0 ; counter8421:ten|qout[3] ; clk          ; counter8421:one|qout[0] ; -0.500       ; 1.194      ; 2.375      ;
+; 1.407 ; qout[3]~reg0 ; counter8421:ten|qout[0] ; clk          ; counter8421:one|qout[0] ; -0.500       ; 1.194      ; 2.375      ;
+; 1.407 ; qout[3]~reg0 ; counter8421:ten|qout[1] ; clk          ; counter8421:one|qout[0] ; -0.500       ; 1.194      ; 2.375      ;
+; 1.407 ; qout[3]~reg0 ; counter8421:ten|qout[2] ; clk          ; counter8421:one|qout[0] ; -0.500       ; 1.194      ; 2.375      ;
+; 1.410 ; qout[2]~reg0 ; counter8421:ten|qout[3] ; clk          ; counter8421:one|qout[0] ; -0.500       ; 1.194      ; 2.378      ;
+; 1.410 ; qout[2]~reg0 ; counter8421:ten|qout[0] ; clk          ; counter8421:one|qout[0] ; -0.500       ; 1.194      ; 2.378      ;
+; 1.410 ; qout[2]~reg0 ; counter8421:ten|qout[1] ; clk          ; counter8421:one|qout[0] ; -0.500       ; 1.194      ; 2.378      ;
+; 1.410 ; qout[2]~reg0 ; counter8421:ten|qout[2] ; clk          ; counter8421:one|qout[0] ; -0.500       ; 1.194      ; 2.378      ;
+; 1.420 ; qout[0]~reg0 ; counter8421:ten|qout[3] ; clk          ; counter8421:one|qout[0] ; -0.500       ; 1.194      ; 2.388      ;
+; 1.420 ; qout[0]~reg0 ; counter8421:ten|qout[0] ; clk          ; counter8421:one|qout[0] ; -0.500       ; 1.194      ; 2.388      ;
+; 1.420 ; qout[0]~reg0 ; counter8421:ten|qout[1] ; clk          ; counter8421:one|qout[0] ; -0.500       ; 1.194      ; 2.388      ;
+; 1.420 ; qout[0]~reg0 ; counter8421:ten|qout[2] ; clk          ; counter8421:one|qout[0] ; -0.500       ; 1.194      ; 2.388      ;
+; 1.663 ; qout[6]~reg0 ; counter8421:ten|qout[3] ; clk          ; counter8421:one|qout[0] ; -0.500       ; 1.194      ; 2.631      ;
+; 1.663 ; qout[6]~reg0 ; counter8421:ten|qout[0] ; clk          ; counter8421:one|qout[0] ; -0.500       ; 1.194      ; 2.631      ;
+; 1.663 ; qout[6]~reg0 ; counter8421:ten|qout[1] ; clk          ; counter8421:one|qout[0] ; -0.500       ; 1.194      ; 2.631      ;
+; 1.663 ; qout[6]~reg0 ; counter8421:ten|qout[2] ; clk          ; counter8421:one|qout[0] ; -0.500       ; 1.194      ; 2.631      ;
+; 1.718 ; qout[1]~reg0 ; counter8421:ten|qout[3] ; clk          ; counter8421:one|qout[0] ; -0.500       ; 1.194      ; 2.686      ;
+; 1.718 ; qout[1]~reg0 ; counter8421:ten|qout[0] ; clk          ; counter8421:one|qout[0] ; -0.500       ; 1.194      ; 2.686      ;
+; 1.718 ; qout[1]~reg0 ; counter8421:ten|qout[1] ; clk          ; counter8421:one|qout[0] ; -0.500       ; 1.194      ; 2.686      ;
+; 1.718 ; qout[1]~reg0 ; counter8421:ten|qout[2] ; clk          ; counter8421:one|qout[0] ; -0.500       ; 1.194      ; 2.686      ;
+; 1.906 ; qout[7]~reg0 ; counter8421:ten|qout[3] ; clk          ; counter8421:one|qout[0] ; -0.500       ; 1.194      ; 2.874      ;
+; 1.906 ; qout[7]~reg0 ; counter8421:ten|qout[0] ; clk          ; counter8421:one|qout[0] ; -0.500       ; 1.194      ; 2.874      ;
+; 1.906 ; qout[7]~reg0 ; counter8421:ten|qout[1] ; clk          ; counter8421:one|qout[0] ; -0.500       ; 1.194      ; 2.874      ;
+; 1.906 ; qout[7]~reg0 ; counter8421:ten|qout[2] ; clk          ; counter8421:one|qout[0] ; -0.500       ; 1.194      ; 2.874      ;
+; 2.059 ; qout[5]~reg0 ; counter8421:ten|qout[3] ; clk          ; counter8421:one|qout[0] ; -0.500       ; 1.194      ; 3.027      ;
+; 2.059 ; qout[5]~reg0 ; counter8421:ten|qout[0] ; clk          ; counter8421:one|qout[0] ; -0.500       ; 1.194      ; 3.027      ;
+; 2.059 ; qout[5]~reg0 ; counter8421:ten|qout[1] ; clk          ; counter8421:one|qout[0] ; -0.500       ; 1.194      ; 3.027      ;
+; 2.059 ; qout[5]~reg0 ; counter8421:ten|qout[2] ; clk          ; counter8421:one|qout[0] ; -0.500       ; 1.194      ; 3.027      ;
++-------+--------------+-------------------------+--------------+-------------------------+--------------+------------+------------+
+
+
++----------------------------------------------------------------------------------------------------------------------+
+; Slow 1000mV 85C Model Removal: 'clk'                                                                                 ;
++-------+--------------+-------------------------+--------------+-------------+--------------+------------+------------+
+; Slack ; From Node    ; To Node                 ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++-------+--------------+-------------------------+--------------+-------------+--------------+------------+------------+
+; 2.670 ; qout[4]~reg0 ; counter8421:one|qout[0] ; clk          ; clk         ; -0.500       ; 0.054      ; 2.488      ;
+; 2.771 ; qout[3]~reg0 ; counter8421:one|qout[0] ; clk          ; clk         ; -0.500       ; 0.054      ; 2.589      ;
+; 2.774 ; qout[2]~reg0 ; counter8421:one|qout[0] ; clk          ; clk         ; -0.500       ; 0.054      ; 2.592      ;
+; 2.784 ; qout[0]~reg0 ; counter8421:one|qout[0] ; clk          ; clk         ; -0.500       ; 0.054      ; 2.602      ;
+; 3.027 ; qout[6]~reg0 ; counter8421:one|qout[0] ; clk          ; clk         ; -0.500       ; 0.054      ; 2.845      ;
+; 3.082 ; qout[1]~reg0 ; counter8421:one|qout[0] ; clk          ; clk         ; -0.500       ; 0.054      ; 2.900      ;
+; 3.270 ; qout[7]~reg0 ; counter8421:one|qout[0] ; clk          ; clk         ; -0.500       ; 0.054      ; 3.088      ;
+; 3.423 ; qout[5]~reg0 ; counter8421:one|qout[0] ; clk          ; clk         ; -0.500       ; 0.054      ; 3.241      ;
+; 3.843 ; qout[4]~reg0 ; counter8421:one|qout[2] ; clk          ; clk         ; -0.500       ; -1.119     ; 2.488      ;
+; 3.843 ; qout[4]~reg0 ; counter8421:one|qout[3] ; clk          ; clk         ; -0.500       ; -1.119     ; 2.488      ;
+; 3.843 ; qout[4]~reg0 ; counter8421:one|qout[1] ; clk          ; clk         ; -0.500       ; -1.119     ; 2.488      ;
+; 3.944 ; qout[3]~reg0 ; counter8421:one|qout[2] ; clk          ; clk         ; -0.500       ; -1.119     ; 2.589      ;
+; 3.944 ; qout[3]~reg0 ; counter8421:one|qout[3] ; clk          ; clk         ; -0.500       ; -1.119     ; 2.589      ;
+; 3.944 ; qout[3]~reg0 ; counter8421:one|qout[1] ; clk          ; clk         ; -0.500       ; -1.119     ; 2.589      ;
+; 3.947 ; qout[2]~reg0 ; counter8421:one|qout[2] ; clk          ; clk         ; -0.500       ; -1.119     ; 2.592      ;
+; 3.947 ; qout[2]~reg0 ; counter8421:one|qout[3] ; clk          ; clk         ; -0.500       ; -1.119     ; 2.592      ;
+; 3.947 ; qout[2]~reg0 ; counter8421:one|qout[1] ; clk          ; clk         ; -0.500       ; -1.119     ; 2.592      ;
+; 3.957 ; qout[0]~reg0 ; counter8421:one|qout[2] ; clk          ; clk         ; -0.500       ; -1.119     ; 2.602      ;
+; 3.957 ; qout[0]~reg0 ; counter8421:one|qout[3] ; clk          ; clk         ; -0.500       ; -1.119     ; 2.602      ;
+; 3.957 ; qout[0]~reg0 ; counter8421:one|qout[1] ; clk          ; clk         ; -0.500       ; -1.119     ; 2.602      ;
+; 4.200 ; qout[6]~reg0 ; counter8421:one|qout[2] ; clk          ; clk         ; -0.500       ; -1.119     ; 2.845      ;
+; 4.200 ; qout[6]~reg0 ; counter8421:one|qout[3] ; clk          ; clk         ; -0.500       ; -1.119     ; 2.845      ;
+; 4.200 ; qout[6]~reg0 ; counter8421:one|qout[1] ; clk          ; clk         ; -0.500       ; -1.119     ; 2.845      ;
+; 4.255 ; qout[1]~reg0 ; counter8421:one|qout[2] ; clk          ; clk         ; -0.500       ; -1.119     ; 2.900      ;
+; 4.255 ; qout[1]~reg0 ; counter8421:one|qout[3] ; clk          ; clk         ; -0.500       ; -1.119     ; 2.900      ;
+; 4.255 ; qout[1]~reg0 ; counter8421:one|qout[1] ; clk          ; clk         ; -0.500       ; -1.119     ; 2.900      ;
+; 4.443 ; qout[7]~reg0 ; counter8421:one|qout[2] ; clk          ; clk         ; -0.500       ; -1.119     ; 3.088      ;
+; 4.443 ; qout[7]~reg0 ; counter8421:one|qout[3] ; clk          ; clk         ; -0.500       ; -1.119     ; 3.088      ;
+; 4.443 ; qout[7]~reg0 ; counter8421:one|qout[1] ; clk          ; clk         ; -0.500       ; -1.119     ; 3.088      ;
+; 4.596 ; qout[5]~reg0 ; counter8421:one|qout[2] ; clk          ; clk         ; -0.500       ; -1.119     ; 3.241      ;
+; 4.596 ; qout[5]~reg0 ; counter8421:one|qout[3] ; clk          ; clk         ; -0.500       ; -1.119     ; 3.241      ;
+; 4.596 ; qout[5]~reg0 ; counter8421:one|qout[1] ; clk          ; clk         ; -0.500       ; -1.119     ; 3.241      ;
++-------+--------------+-------------------------+--------------+-------------+--------------+------------+------------+
+
+
+-----------------------------------------------
+; Slow 1000mV 85C Model Metastability Summary ;
+-----------------------------------------------
+No synchronizer chains to report.
+
+
++------------------------------------------------------------------------------------------------------------------------+
+; Slow 1000mV 0C Model Fmax Summary                                                                                      ;
++------------+-----------------+-------------------------+---------------------------------------------------------------+
+; Fmax       ; Restricted Fmax ; Clock Name              ; Note                                                          ;
++------------+-----------------+-------------------------+---------------------------------------------------------------+
+; 354.86 MHz ; 250.0 MHz       ; clk                     ; limit due to minimum period restriction (max I/O toggle rate) ;
+; 518.13 MHz ; 361.93 MHz      ; counter8421:one|qout[0] ; limit due to minimum period restriction (tmin)                ;
++------------+-----------------+-------------------------+---------------------------------------------------------------+
+This panel reports FMAX for every clock in the design, regardless of the user-specified clock periods.  FMAX is only computed for paths where the source and destination registers or ports are driven by the same clock.  Paths of different clocks, including generated clocks, are ignored.  For paths between a clock and its inversion, FMAX is computed as if the rising and falling edges are scaled along with FMAX, such that the duty cycle (in terms of a percentage) is maintained. Altera recommends that you always use clock constraints and other slack reports for sign-off analysis.
+
+
++--------------------------------------------------+
+; Slow 1000mV 0C Model Setup Summary               ;
++-------------------------+--------+---------------+
+; Clock                   ; Slack  ; End Point TNS ;
++-------------------------+--------+---------------+
+; clk                     ; -1.867 ; -16.168       ;
+; counter8421:one|qout[0] ; -0.930 ; -3.608        ;
++-------------------------+--------+---------------+
+
+
++-------------------------------------------------+
+; Slow 1000mV 0C Model Hold Summary               ;
++-------------------------+-------+---------------+
+; Clock                   ; Slack ; End Point TNS ;
++-------------------------+-------+---------------+
+; clk                     ; 0.481 ; 0.000         ;
+; counter8421:one|qout[0] ; 0.907 ; 0.000         ;
++-------------------------+-------+---------------+
+
+
++--------------------------------------------------+
+; Slow 1000mV 0C Model Recovery Summary            ;
++-------------------------+--------+---------------+
+; Clock                   ; Slack  ; End Point TNS ;
++-------------------------+--------+---------------+
+; clk                     ; -4.368 ; -16.432       ;
+; counter8421:one|qout[0] ; -2.161 ; -8.644        ;
++-------------------------+--------+---------------+
+
+
++-------------------------------------------------+
+; Slow 1000mV 0C Model Removal Summary            ;
++-------------------------+-------+---------------+
+; Clock                   ; Slack ; End Point TNS ;
++-------------------------+-------+---------------+
+; counter8421:one|qout[0] ; 1.365 ; 0.000         ;
+; clk                     ; 2.660 ; 0.000         ;
++-------------------------+-------+---------------+
+
+
++--------------------------------------------------+
+; Slow 1000mV 0C Model Minimum Pulse Width Summary ;
++-------------------------+--------+---------------+
+; Clock                   ; Slack  ; End Point TNS ;
++-------------------------+--------+---------------+
+; clk                     ; -3.000 ; -24.156       ;
+; counter8421:one|qout[0] ; -1.763 ; -7.052        ;
++-------------------------+--------+---------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------+
+; Slow 1000mV 0C Model Setup: 'clk'                                                                                                           ;
++--------+-------------------------+-------------------------+-------------------------+-------------+--------------+------------+------------+
+; Slack  ; From Node               ; To Node                 ; Launch Clock            ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++--------+-------------------------+-------------------------+-------------------------+-------------+--------------+------------+------------+
+; -1.867 ; counter8421:ten|qout[0] ; qout[4]~reg0            ; counter8421:one|qout[0] ; clk         ; 0.500        ; -1.087     ; 1.282      ;
+; -1.841 ; counter8421:ten|qout[3] ; qout[7]~reg0            ; counter8421:one|qout[0] ; clk         ; 0.500        ; -1.087     ; 1.256      ;
+; -1.821 ; counter8421:ten|qout[2] ; qout[6]~reg0            ; counter8421:one|qout[0] ; clk         ; 0.500        ; -1.087     ; 1.236      ;
+; -1.818 ; counter8421:one|qout[2] ; counter8421:one|qout[2] ; clk                     ; clk         ; 1.000        ; -0.053     ; 2.777      ;
+; -1.812 ; counter8421:one|qout[2] ; counter8421:one|qout[3] ; clk                     ; clk         ; 1.000        ; -0.053     ; 2.771      ;
+; -1.810 ; counter8421:one|qout[3] ; counter8421:one|qout[3] ; clk                     ; clk         ; 1.000        ; -0.053     ; 2.769      ;
+; -1.786 ; counter8421:one|qout[3] ; counter8421:one|qout[0] ; clk                     ; clk         ; 1.000        ; 0.930      ; 3.728      ;
+; -1.779 ; counter8421:one|qout[3] ; counter8421:one|qout[2] ; clk                     ; clk         ; 1.000        ; -0.053     ; 2.738      ;
+; -1.765 ; counter8421:one|qout[2] ; counter8421:one|qout[0] ; clk                     ; clk         ; 1.000        ; 0.930      ; 3.707      ;
+; -1.752 ; counter8421:one|qout[3] ; counter8421:one|qout[1] ; clk                     ; clk         ; 1.000        ; -0.053     ; 2.711      ;
+; -1.659 ; counter8421:one|qout[1] ; counter8421:one|qout[0] ; clk                     ; clk         ; 1.000        ; 0.930      ; 3.601      ;
+; -1.620 ; counter8421:ten|qout[1] ; qout[5]~reg0            ; counter8421:one|qout[0] ; clk         ; 0.500        ; -1.087     ; 1.035      ;
+; -1.506 ; counter8421:one|qout[0] ; counter8421:one|qout[0] ; counter8421:one|qout[0] ; clk         ; 0.500        ; 3.189      ; 5.517      ;
+; -1.434 ; counter8421:one|qout[1] ; counter8421:one|qout[3] ; clk                     ; clk         ; 1.000        ; -0.053     ; 2.393      ;
+; -1.419 ; counter8421:one|qout[1] ; counter8421:one|qout[2] ; clk                     ; clk         ; 1.000        ; -0.053     ; 2.378      ;
+; -1.412 ; counter8421:one|qout[1] ; counter8421:one|qout[1] ; clk                     ; clk         ; 1.000        ; -0.053     ; 2.371      ;
+; -1.267 ; counter8421:one|qout[0] ; qout[0]~reg0            ; counter8421:one|qout[0] ; clk         ; 0.500        ; 3.278      ; 5.367      ;
+; -1.258 ; counter8421:one|qout[0] ; counter8421:one|qout[1] ; counter8421:one|qout[0] ; clk         ; 0.500        ; 2.179      ; 4.259      ;
+; -1.254 ; counter8421:one|qout[0] ; counter8421:one|qout[2] ; counter8421:one|qout[0] ; clk         ; 0.500        ; 2.179      ; 4.255      ;
+; -1.252 ; counter8421:one|qout[0] ; counter8421:one|qout[3] ; counter8421:one|qout[0] ; clk         ; 0.500        ; 2.179      ; 4.253      ;
+; -1.066 ; counter8421:one|qout[0] ; counter8421:one|qout[0] ; counter8421:one|qout[0] ; clk         ; 1.000        ; 3.189      ; 5.577      ;
+; -0.965 ; counter8421:one|qout[0] ; qout[0]~reg0            ; counter8421:one|qout[0] ; clk         ; 1.000        ; 3.278      ; 5.565      ;
+; -0.737 ; counter8421:one|qout[0] ; counter8421:one|qout[1] ; counter8421:one|qout[0] ; clk         ; 1.000        ; 2.179      ; 4.238      ;
+; -0.734 ; counter8421:one|qout[0] ; counter8421:one|qout[2] ; counter8421:one|qout[0] ; clk         ; 1.000        ; 2.179      ; 4.235      ;
+; -0.698 ; counter8421:one|qout[0] ; counter8421:one|qout[3] ; counter8421:one|qout[0] ; clk         ; 1.000        ; 2.179      ; 4.199      ;
+; -0.259 ; counter8421:one|qout[1] ; qout[1]~reg0            ; clk                     ; clk         ; 0.500        ; 1.019      ; 1.790      ;
+; -0.244 ; counter8421:one|qout[2] ; qout[2]~reg0            ; clk                     ; clk         ; 0.500        ; 1.019      ; 1.775      ;
+; -0.081 ; counter8421:one|qout[3] ; qout[3]~reg0            ; clk                     ; clk         ; 0.500        ; 1.019      ; 1.612      ;
++--------+-------------------------+-------------------------+-------------------------+-------------+--------------+------------+------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Slow 1000mV 0C Model Setup: 'counter8421:one|qout[0]'                                                                                                   ;
++--------+-------------------------+-------------------------+-------------------------+-------------------------+--------------+------------+------------+
+; Slack  ; From Node               ; To Node                 ; Launch Clock            ; Latch Clock             ; Relationship ; Clock Skew ; Data Delay ;
++--------+-------------------------+-------------------------+-------------------------+-------------------------+--------------+------------+------------+
+; -0.930 ; counter8421:ten|qout[0] ; counter8421:ten|qout[1] ; counter8421:one|qout[0] ; counter8421:one|qout[0] ; 1.000        ; -0.093     ; 1.849      ;
+; -0.923 ; counter8421:ten|qout[3] ; counter8421:ten|qout[3] ; counter8421:one|qout[0] ; counter8421:one|qout[0] ; 1.000        ; -0.093     ; 1.842      ;
+; -0.914 ; counter8421:ten|qout[3] ; counter8421:ten|qout[1] ; counter8421:one|qout[0] ; counter8421:one|qout[0] ; 1.000        ; -0.093     ; 1.833      ;
+; -0.901 ; counter8421:ten|qout[3] ; counter8421:ten|qout[2] ; counter8421:one|qout[0] ; counter8421:one|qout[0] ; 1.000        ; -0.093     ; 1.820      ;
+; -0.894 ; counter8421:ten|qout[2] ; counter8421:ten|qout[3] ; counter8421:one|qout[0] ; counter8421:one|qout[0] ; 1.000        ; -0.093     ; 1.813      ;
+; -0.854 ; counter8421:ten|qout[1] ; counter8421:ten|qout[0] ; counter8421:one|qout[0] ; counter8421:one|qout[0] ; 1.000        ; -0.093     ; 1.773      ;
+; -0.841 ; counter8421:ten|qout[2] ; counter8421:ten|qout[0] ; counter8421:one|qout[0] ; counter8421:one|qout[0] ; 1.000        ; -0.093     ; 1.760      ;
+; -0.831 ; counter8421:ten|qout[0] ; counter8421:ten|qout[2] ; counter8421:one|qout[0] ; counter8421:one|qout[0] ; 1.000        ; -0.093     ; 1.750      ;
+; -0.743 ; counter8421:ten|qout[0] ; counter8421:ten|qout[3] ; counter8421:one|qout[0] ; counter8421:one|qout[0] ; 1.000        ; -0.093     ; 1.662      ;
+; -0.710 ; counter8421:ten|qout[2] ; counter8421:ten|qout[2] ; counter8421:one|qout[0] ; counter8421:one|qout[0] ; 1.000        ; -0.093     ; 1.629      ;
+; -0.699 ; counter8421:ten|qout[3] ; counter8421:ten|qout[0] ; counter8421:one|qout[0] ; counter8421:one|qout[0] ; 1.000        ; -0.093     ; 1.618      ;
+; -0.653 ; counter8421:ten|qout[0] ; counter8421:ten|qout[0] ; counter8421:one|qout[0] ; counter8421:one|qout[0] ; 1.000        ; -0.093     ; 1.572      ;
+; -0.532 ; counter8421:ten|qout[1] ; counter8421:ten|qout[1] ; counter8421:one|qout[0] ; counter8421:one|qout[0] ; 1.000        ; -0.093     ; 1.451      ;
+; -0.529 ; counter8421:ten|qout[1] ; counter8421:ten|qout[3] ; counter8421:one|qout[0] ; counter8421:one|qout[0] ; 1.000        ; -0.093     ; 1.448      ;
+; -0.526 ; counter8421:ten|qout[1] ; counter8421:ten|qout[2] ; counter8421:one|qout[0] ; counter8421:one|qout[0] ; 1.000        ; -0.093     ; 1.445      ;
++--------+-------------------------+-------------------------+-------------------------+-------------------------+--------------+------------+------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------+
+; Slow 1000mV 0C Model Hold: 'clk'                                                                                                           ;
++-------+-------------------------+-------------------------+-------------------------+-------------+--------------+------------+------------+
+; Slack ; From Node               ; To Node                 ; Launch Clock            ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++-------+-------------------------+-------------------------+-------------------------+-------------+--------------+------------+------------+
+; 0.481 ; counter8421:one|qout[1] ; qout[1]~reg0            ; clk                     ; clk         ; -0.500       ; 1.222      ; 1.478      ;
+; 0.533 ; counter8421:one|qout[3] ; qout[3]~reg0            ; clk                     ; clk         ; -0.500       ; 1.222      ; 1.530      ;
+; 0.696 ; counter8421:one|qout[2] ; qout[2]~reg0            ; clk                     ; clk         ; -0.500       ; 1.222      ; 1.693      ;
+; 1.017 ; counter8421:one|qout[0] ; counter8421:one|qout[1] ; counter8421:one|qout[0] ; clk         ; 0.000        ; 2.259      ; 3.881      ;
+; 1.021 ; counter8421:one|qout[0] ; counter8421:one|qout[2] ; counter8421:one|qout[0] ; clk         ; 0.000        ; 2.259      ; 3.885      ;
+; 1.146 ; counter8421:one|qout[0] ; counter8421:one|qout[3] ; counter8421:one|qout[0] ; clk         ; 0.000        ; 2.259      ; 4.010      ;
+; 1.350 ; counter8421:one|qout[0] ; qout[0]~reg0            ; counter8421:one|qout[0] ; clk         ; 0.000        ; 3.401      ; 5.356      ;
+; 1.428 ; counter8421:one|qout[0] ; counter8421:one|qout[0] ; counter8421:one|qout[0] ; clk         ; 0.000        ; 3.311      ; 5.344      ;
+; 1.571 ; counter8421:one|qout[0] ; counter8421:one|qout[2] ; counter8421:one|qout[0] ; clk         ; -0.500       ; 2.259      ; 3.935      ;
+; 1.573 ; counter8421:one|qout[0] ; counter8421:one|qout[1] ; counter8421:one|qout[0] ; clk         ; -0.500       ; 2.259      ; 3.937      ;
+; 1.660 ; counter8421:one|qout[0] ; qout[0]~reg0            ; counter8421:one|qout[0] ; clk         ; -0.500       ; 3.401      ; 5.166      ;
+; 1.661 ; counter8421:one|qout[0] ; counter8421:one|qout[3] ; counter8421:one|qout[0] ; clk         ; -0.500       ; 2.259      ; 4.025      ;
+; 1.725 ; counter8421:one|qout[1] ; counter8421:one|qout[1] ; clk                     ; clk         ; 0.000        ; 0.053      ; 2.033      ;
+; 1.731 ; counter8421:one|qout[1] ; counter8421:one|qout[2] ; clk                     ; clk         ; 0.000        ; 0.053      ; 2.039      ;
+; 1.797 ; counter8421:one|qout[1] ; counter8421:one|qout[0] ; clk                     ; clk         ; 0.000        ; 1.132      ; 3.184      ;
+; 1.828 ; counter8421:one|qout[1] ; counter8421:one|qout[3] ; clk                     ; clk         ; 0.000        ; 0.053      ; 2.136      ;
+; 1.861 ; counter8421:one|qout[0] ; counter8421:one|qout[0] ; counter8421:one|qout[0] ; clk         ; -0.500       ; 3.311      ; 5.277      ;
+; 1.866 ; counter8421:one|qout[3] ; counter8421:one|qout[0] ; clk                     ; clk         ; 0.000        ; 1.132      ; 3.253      ;
+; 1.878 ; counter8421:ten|qout[1] ; qout[5]~reg0            ; counter8421:one|qout[0] ; clk         ; -0.500       ; -0.767     ; 0.896      ;
+; 1.913 ; counter8421:one|qout[2] ; counter8421:one|qout[0] ; clk                     ; clk         ; 0.000        ; 1.132      ; 3.300      ;
+; 1.992 ; counter8421:one|qout[2] ; counter8421:one|qout[2] ; clk                     ; clk         ; 0.000        ; 0.053      ; 2.300      ;
+; 2.014 ; counter8421:ten|qout[2] ; qout[6]~reg0            ; counter8421:one|qout[0] ; clk         ; -0.500       ; -0.767     ; 1.032      ;
+; 2.017 ; counter8421:one|qout[3] ; counter8421:one|qout[2] ; clk                     ; clk         ; 0.000        ; 0.053      ; 2.325      ;
+; 2.018 ; counter8421:one|qout[3] ; counter8421:one|qout[1] ; clk                     ; clk         ; 0.000        ; 0.053      ; 2.326      ;
+; 2.027 ; counter8421:ten|qout[3] ; qout[7]~reg0            ; counter8421:one|qout[0] ; clk         ; -0.500       ; -0.767     ; 1.045      ;
+; 2.122 ; counter8421:one|qout[2] ; counter8421:one|qout[3] ; clk                     ; clk         ; 0.000        ; 0.053      ; 2.430      ;
+; 2.150 ; counter8421:ten|qout[0] ; qout[4]~reg0            ; counter8421:one|qout[0] ; clk         ; -0.500       ; -0.767     ; 1.168      ;
+; 2.161 ; counter8421:one|qout[3] ; counter8421:one|qout[3] ; clk                     ; clk         ; 0.000        ; 0.053      ; 2.469      ;
++-------+-------------------------+-------------------------+-------------------------+-------------+--------------+------------+------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Slow 1000mV 0C Model Hold: 'counter8421:one|qout[0]'                                                                                                   ;
++-------+-------------------------+-------------------------+-------------------------+-------------------------+--------------+------------+------------+
+; Slack ; From Node               ; To Node                 ; Launch Clock            ; Latch Clock             ; Relationship ; Clock Skew ; Data Delay ;
++-------+-------------------------+-------------------------+-------------------------+-------------------------+--------------+------------+------------+
+; 0.907 ; counter8421:ten|qout[1] ; counter8421:ten|qout[2] ; counter8421:one|qout[0] ; counter8421:one|qout[0] ; 0.000        ; 0.093      ; 1.255      ;
+; 0.909 ; counter8421:ten|qout[1] ; counter8421:ten|qout[3] ; counter8421:one|qout[0] ; counter8421:one|qout[0] ; 0.000        ; 0.093      ; 1.257      ;
+; 0.912 ; counter8421:ten|qout[1] ; counter8421:ten|qout[1] ; counter8421:one|qout[0] ; counter8421:one|qout[0] ; 0.000        ; 0.093      ; 1.260      ;
+; 1.042 ; counter8421:ten|qout[0] ; counter8421:ten|qout[0] ; counter8421:one|qout[0] ; counter8421:one|qout[0] ; 0.000        ; 0.093      ; 1.390      ;
+; 1.047 ; counter8421:ten|qout[2] ; counter8421:ten|qout[2] ; counter8421:one|qout[0] ; counter8421:one|qout[0] ; 0.000        ; 0.093      ; 1.395      ;
+; 1.058 ; counter8421:ten|qout[3] ; counter8421:ten|qout[0] ; counter8421:one|qout[0] ; counter8421:one|qout[0] ; 0.000        ; 0.093      ; 1.406      ;
+; 1.073 ; counter8421:ten|qout[0] ; counter8421:ten|qout[3] ; counter8421:one|qout[0] ; counter8421:one|qout[0] ; 0.000        ; 0.093      ; 1.421      ;
+; 1.164 ; counter8421:ten|qout[2] ; counter8421:ten|qout[3] ; counter8421:one|qout[0] ; counter8421:one|qout[0] ; 0.000        ; 0.093      ; 1.512      ;
+; 1.183 ; counter8421:ten|qout[3] ; counter8421:ten|qout[1] ; counter8421:one|qout[0] ; counter8421:one|qout[0] ; 0.000        ; 0.093      ; 1.531      ;
+; 1.185 ; counter8421:ten|qout[3] ; counter8421:ten|qout[2] ; counter8421:one|qout[0] ; counter8421:one|qout[0] ; 0.000        ; 0.093      ; 1.533      ;
+; 1.189 ; counter8421:ten|qout[0] ; counter8421:ten|qout[2] ; counter8421:one|qout[0] ; counter8421:one|qout[0] ; 0.000        ; 0.093      ; 1.537      ;
+; 1.209 ; counter8421:ten|qout[0] ; counter8421:ten|qout[1] ; counter8421:one|qout[0] ; counter8421:one|qout[0] ; 0.000        ; 0.093      ; 1.557      ;
+; 1.233 ; counter8421:ten|qout[3] ; counter8421:ten|qout[3] ; counter8421:one|qout[0] ; counter8421:one|qout[0] ; 0.000        ; 0.093      ; 1.581      ;
+; 1.234 ; counter8421:ten|qout[1] ; counter8421:ten|qout[0] ; counter8421:one|qout[0] ; counter8421:one|qout[0] ; 0.000        ; 0.093      ; 1.582      ;
+; 1.239 ; counter8421:ten|qout[2] ; counter8421:ten|qout[0] ; counter8421:one|qout[0] ; counter8421:one|qout[0] ; 0.000        ; 0.093      ; 1.587      ;
++-------+-------------------------+-------------------------+-------------------------+-------------------------+--------------+------------+------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------+
+; Slow 1000mV 0C Model Recovery: 'clk'                                                                                  ;
++--------+--------------+-------------------------+--------------+-------------+--------------+------------+------------+
+; Slack  ; From Node    ; To Node                 ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++--------+--------------+-------------------------+--------------+-------------+--------------+------------+------------+
+; -4.368 ; qout[5]~reg0 ; counter8421:one|qout[2] ; clk          ; clk         ; 0.500        ; -1.222     ; 3.658      ;
+; -4.368 ; qout[5]~reg0 ; counter8421:one|qout[3] ; clk          ; clk         ; 0.500        ; -1.222     ; 3.658      ;
+; -4.368 ; qout[5]~reg0 ; counter8421:one|qout[1] ; clk          ; clk         ; 0.500        ; -1.222     ; 3.658      ;
+; -4.357 ; qout[7]~reg0 ; counter8421:one|qout[2] ; clk          ; clk         ; 0.500        ; -1.222     ; 3.647      ;
+; -4.357 ; qout[7]~reg0 ; counter8421:one|qout[3] ; clk          ; clk         ; 0.500        ; -1.222     ; 3.647      ;
+; -4.357 ; qout[7]~reg0 ; counter8421:one|qout[1] ; clk          ; clk         ; 0.500        ; -1.222     ; 3.647      ;
+; -3.946 ; qout[6]~reg0 ; counter8421:one|qout[2] ; clk          ; clk         ; 0.500        ; -1.222     ; 3.236      ;
+; -3.946 ; qout[6]~reg0 ; counter8421:one|qout[3] ; clk          ; clk         ; 0.500        ; -1.222     ; 3.236      ;
+; -3.946 ; qout[6]~reg0 ; counter8421:one|qout[1] ; clk          ; clk         ; 0.500        ; -1.222     ; 3.236      ;
+; -3.940 ; qout[1]~reg0 ; counter8421:one|qout[2] ; clk          ; clk         ; 0.500        ; -1.222     ; 3.230      ;
+; -3.940 ; qout[1]~reg0 ; counter8421:one|qout[3] ; clk          ; clk         ; 0.500        ; -1.222     ; 3.230      ;
+; -3.940 ; qout[1]~reg0 ; counter8421:one|qout[1] ; clk          ; clk         ; 0.500        ; -1.222     ; 3.230      ;
+; -3.523 ; qout[3]~reg0 ; counter8421:one|qout[2] ; clk          ; clk         ; 0.500        ; -1.222     ; 2.813      ;
+; -3.523 ; qout[3]~reg0 ; counter8421:one|qout[3] ; clk          ; clk         ; 0.500        ; -1.222     ; 2.813      ;
+; -3.523 ; qout[3]~reg0 ; counter8421:one|qout[1] ; clk          ; clk         ; 0.500        ; -1.222     ; 2.813      ;
+; -3.511 ; qout[0]~reg0 ; counter8421:one|qout[2] ; clk          ; clk         ; 0.500        ; -1.222     ; 2.801      ;
+; -3.511 ; qout[0]~reg0 ; counter8421:one|qout[3] ; clk          ; clk         ; 0.500        ; -1.222     ; 2.801      ;
+; -3.511 ; qout[0]~reg0 ; counter8421:one|qout[1] ; clk          ; clk         ; 0.500        ; -1.222     ; 2.801      ;
+; -3.444 ; qout[4]~reg0 ; counter8421:one|qout[2] ; clk          ; clk         ; 0.500        ; -1.222     ; 2.734      ;
+; -3.444 ; qout[4]~reg0 ; counter8421:one|qout[3] ; clk          ; clk         ; 0.500        ; -1.222     ; 2.734      ;
+; -3.444 ; qout[4]~reg0 ; counter8421:one|qout[1] ; clk          ; clk         ; 0.500        ; -1.222     ; 2.734      ;
+; -3.434 ; qout[2]~reg0 ; counter8421:one|qout[2] ; clk          ; clk         ; 0.500        ; -1.222     ; 2.724      ;
+; -3.434 ; qout[2]~reg0 ; counter8421:one|qout[3] ; clk          ; clk         ; 0.500        ; -1.222     ; 2.724      ;
+; -3.434 ; qout[2]~reg0 ; counter8421:one|qout[1] ; clk          ; clk         ; 0.500        ; -1.222     ; 2.724      ;
+; -3.328 ; qout[5]~reg0 ; counter8421:one|qout[0] ; clk          ; clk         ; 0.500        ; -0.182     ; 3.658      ;
+; -3.317 ; qout[7]~reg0 ; counter8421:one|qout[0] ; clk          ; clk         ; 0.500        ; -0.182     ; 3.647      ;
+; -2.906 ; qout[6]~reg0 ; counter8421:one|qout[0] ; clk          ; clk         ; 0.500        ; -0.182     ; 3.236      ;
+; -2.900 ; qout[1]~reg0 ; counter8421:one|qout[0] ; clk          ; clk         ; 0.500        ; -0.182     ; 3.230      ;
+; -2.483 ; qout[3]~reg0 ; counter8421:one|qout[0] ; clk          ; clk         ; 0.500        ; -0.182     ; 2.813      ;
+; -2.471 ; qout[0]~reg0 ; counter8421:one|qout[0] ; clk          ; clk         ; 0.500        ; -0.182     ; 2.801      ;
+; -2.404 ; qout[4]~reg0 ; counter8421:one|qout[0] ; clk          ; clk         ; 0.500        ; -0.182     ; 2.734      ;
+; -2.394 ; qout[2]~reg0 ; counter8421:one|qout[0] ; clk          ; clk         ; 0.500        ; -0.182     ; 2.724      ;
++--------+--------------+-------------------------+--------------+-------------+--------------+------------+------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------+
+; Slow 1000mV 0C Model Recovery: 'counter8421:one|qout[0]'                                                                          ;
++--------+--------------+-------------------------+--------------+-------------------------+--------------+------------+------------+
+; Slack  ; From Node    ; To Node                 ; Launch Clock ; Latch Clock             ; Relationship ; Clock Skew ; Data Delay ;
++--------+--------------+-------------------------+--------------+-------------------------+--------------+------------+------------+
+; -2.161 ; qout[5]~reg0 ; counter8421:ten|qout[3] ; clk          ; counter8421:one|qout[0] ; 0.500        ; 0.767      ; 3.430      ;
+; -2.161 ; qout[5]~reg0 ; counter8421:ten|qout[0] ; clk          ; counter8421:one|qout[0] ; 0.500        ; 0.767      ; 3.430      ;
+; -2.161 ; qout[5]~reg0 ; counter8421:ten|qout[1] ; clk          ; counter8421:one|qout[0] ; 0.500        ; 0.767      ; 3.430      ;
+; -2.161 ; qout[5]~reg0 ; counter8421:ten|qout[2] ; clk          ; counter8421:one|qout[0] ; 0.500        ; 0.767      ; 3.430      ;
+; -2.150 ; qout[7]~reg0 ; counter8421:ten|qout[3] ; clk          ; counter8421:one|qout[0] ; 0.500        ; 0.767      ; 3.419      ;
+; -2.150 ; qout[7]~reg0 ; counter8421:ten|qout[0] ; clk          ; counter8421:one|qout[0] ; 0.500        ; 0.767      ; 3.419      ;
+; -2.150 ; qout[7]~reg0 ; counter8421:ten|qout[1] ; clk          ; counter8421:one|qout[0] ; 0.500        ; 0.767      ; 3.419      ;
+; -2.150 ; qout[7]~reg0 ; counter8421:ten|qout[2] ; clk          ; counter8421:one|qout[0] ; 0.500        ; 0.767      ; 3.419      ;
+; -1.739 ; qout[6]~reg0 ; counter8421:ten|qout[3] ; clk          ; counter8421:one|qout[0] ; 0.500        ; 0.767      ; 3.008      ;
+; -1.739 ; qout[6]~reg0 ; counter8421:ten|qout[0] ; clk          ; counter8421:one|qout[0] ; 0.500        ; 0.767      ; 3.008      ;
+; -1.739 ; qout[6]~reg0 ; counter8421:ten|qout[1] ; clk          ; counter8421:one|qout[0] ; 0.500        ; 0.767      ; 3.008      ;
+; -1.739 ; qout[6]~reg0 ; counter8421:ten|qout[2] ; clk          ; counter8421:one|qout[0] ; 0.500        ; 0.767      ; 3.008      ;
+; -1.733 ; qout[1]~reg0 ; counter8421:ten|qout[3] ; clk          ; counter8421:one|qout[0] ; 0.500        ; 0.767      ; 3.002      ;
+; -1.733 ; qout[1]~reg0 ; counter8421:ten|qout[0] ; clk          ; counter8421:one|qout[0] ; 0.500        ; 0.767      ; 3.002      ;
+; -1.733 ; qout[1]~reg0 ; counter8421:ten|qout[1] ; clk          ; counter8421:one|qout[0] ; 0.500        ; 0.767      ; 3.002      ;
+; -1.733 ; qout[1]~reg0 ; counter8421:ten|qout[2] ; clk          ; counter8421:one|qout[0] ; 0.500        ; 0.767      ; 3.002      ;
+; -1.316 ; qout[3]~reg0 ; counter8421:ten|qout[3] ; clk          ; counter8421:one|qout[0] ; 0.500        ; 0.767      ; 2.585      ;
+; -1.316 ; qout[3]~reg0 ; counter8421:ten|qout[0] ; clk          ; counter8421:one|qout[0] ; 0.500        ; 0.767      ; 2.585      ;
+; -1.316 ; qout[3]~reg0 ; counter8421:ten|qout[1] ; clk          ; counter8421:one|qout[0] ; 0.500        ; 0.767      ; 2.585      ;
+; -1.316 ; qout[3]~reg0 ; counter8421:ten|qout[2] ; clk          ; counter8421:one|qout[0] ; 0.500        ; 0.767      ; 2.585      ;
+; -1.304 ; qout[0]~reg0 ; counter8421:ten|qout[3] ; clk          ; counter8421:one|qout[0] ; 0.500        ; 0.767      ; 2.573      ;
+; -1.304 ; qout[0]~reg0 ; counter8421:ten|qout[0] ; clk          ; counter8421:one|qout[0] ; 0.500        ; 0.767      ; 2.573      ;
+; -1.304 ; qout[0]~reg0 ; counter8421:ten|qout[1] ; clk          ; counter8421:one|qout[0] ; 0.500        ; 0.767      ; 2.573      ;
+; -1.304 ; qout[0]~reg0 ; counter8421:ten|qout[2] ; clk          ; counter8421:one|qout[0] ; 0.500        ; 0.767      ; 2.573      ;
+; -1.237 ; qout[4]~reg0 ; counter8421:ten|qout[3] ; clk          ; counter8421:one|qout[0] ; 0.500        ; 0.767      ; 2.506      ;
+; -1.237 ; qout[4]~reg0 ; counter8421:ten|qout[0] ; clk          ; counter8421:one|qout[0] ; 0.500        ; 0.767      ; 2.506      ;
+; -1.237 ; qout[4]~reg0 ; counter8421:ten|qout[1] ; clk          ; counter8421:one|qout[0] ; 0.500        ; 0.767      ; 2.506      ;
+; -1.237 ; qout[4]~reg0 ; counter8421:ten|qout[2] ; clk          ; counter8421:one|qout[0] ; 0.500        ; 0.767      ; 2.506      ;
+; -1.227 ; qout[2]~reg0 ; counter8421:ten|qout[3] ; clk          ; counter8421:one|qout[0] ; 0.500        ; 0.767      ; 2.496      ;
+; -1.227 ; qout[2]~reg0 ; counter8421:ten|qout[0] ; clk          ; counter8421:one|qout[0] ; 0.500        ; 0.767      ; 2.496      ;
+; -1.227 ; qout[2]~reg0 ; counter8421:ten|qout[1] ; clk          ; counter8421:one|qout[0] ; 0.500        ; 0.767      ; 2.496      ;
+; -1.227 ; qout[2]~reg0 ; counter8421:ten|qout[2] ; clk          ; counter8421:one|qout[0] ; 0.500        ; 0.767      ; 2.496      ;
++--------+--------------+-------------------------+--------------+-------------------------+--------------+------------+------------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------+
+; Slow 1000mV 0C Model Removal: 'counter8421:one|qout[0]'                                                                          ;
++-------+--------------+-------------------------+--------------+-------------------------+--------------+------------+------------+
+; Slack ; From Node    ; To Node                 ; Launch Clock ; Latch Clock             ; Relationship ; Clock Skew ; Data Delay ;
++-------+--------------+-------------------------+--------------+-------------------------+--------------+------------+------------+
+; 1.365 ; qout[4]~reg0 ; counter8421:ten|qout[3] ; clk          ; counter8421:one|qout[0] ; -0.500       ; 1.087      ; 2.237      ;
+; 1.365 ; qout[4]~reg0 ; counter8421:ten|qout[0] ; clk          ; counter8421:one|qout[0] ; -0.500       ; 1.087      ; 2.237      ;
+; 1.365 ; qout[4]~reg0 ; counter8421:ten|qout[1] ; clk          ; counter8421:one|qout[0] ; -0.500       ; 1.087      ; 2.237      ;
+; 1.365 ; qout[4]~reg0 ; counter8421:ten|qout[2] ; clk          ; counter8421:one|qout[0] ; -0.500       ; 1.087      ; 2.237      ;
+; 1.463 ; qout[3]~reg0 ; counter8421:ten|qout[3] ; clk          ; counter8421:one|qout[0] ; -0.500       ; 1.087      ; 2.335      ;
+; 1.463 ; qout[3]~reg0 ; counter8421:ten|qout[0] ; clk          ; counter8421:one|qout[0] ; -0.500       ; 1.087      ; 2.335      ;
+; 1.463 ; qout[3]~reg0 ; counter8421:ten|qout[1] ; clk          ; counter8421:one|qout[0] ; -0.500       ; 1.087      ; 2.335      ;
+; 1.463 ; qout[3]~reg0 ; counter8421:ten|qout[2] ; clk          ; counter8421:one|qout[0] ; -0.500       ; 1.087      ; 2.335      ;
+; 1.476 ; qout[0]~reg0 ; counter8421:ten|qout[3] ; clk          ; counter8421:one|qout[0] ; -0.500       ; 1.087      ; 2.348      ;
+; 1.476 ; qout[0]~reg0 ; counter8421:ten|qout[0] ; clk          ; counter8421:one|qout[0] ; -0.500       ; 1.087      ; 2.348      ;
+; 1.476 ; qout[0]~reg0 ; counter8421:ten|qout[1] ; clk          ; counter8421:one|qout[0] ; -0.500       ; 1.087      ; 2.348      ;
+; 1.476 ; qout[0]~reg0 ; counter8421:ten|qout[2] ; clk          ; counter8421:one|qout[0] ; -0.500       ; 1.087      ; 2.348      ;
+; 1.480 ; qout[2]~reg0 ; counter8421:ten|qout[3] ; clk          ; counter8421:one|qout[0] ; -0.500       ; 1.087      ; 2.352      ;
+; 1.480 ; qout[2]~reg0 ; counter8421:ten|qout[0] ; clk          ; counter8421:one|qout[0] ; -0.500       ; 1.087      ; 2.352      ;
+; 1.480 ; qout[2]~reg0 ; counter8421:ten|qout[1] ; clk          ; counter8421:one|qout[0] ; -0.500       ; 1.087      ; 2.352      ;
+; 1.480 ; qout[2]~reg0 ; counter8421:ten|qout[2] ; clk          ; counter8421:one|qout[0] ; -0.500       ; 1.087      ; 2.352      ;
+; 1.708 ; qout[6]~reg0 ; counter8421:ten|qout[3] ; clk          ; counter8421:one|qout[0] ; -0.500       ; 1.087      ; 2.580      ;
+; 1.708 ; qout[6]~reg0 ; counter8421:ten|qout[0] ; clk          ; counter8421:one|qout[0] ; -0.500       ; 1.087      ; 2.580      ;
+; 1.708 ; qout[6]~reg0 ; counter8421:ten|qout[1] ; clk          ; counter8421:one|qout[0] ; -0.500       ; 1.087      ; 2.580      ;
+; 1.708 ; qout[6]~reg0 ; counter8421:ten|qout[2] ; clk          ; counter8421:one|qout[0] ; -0.500       ; 1.087      ; 2.580      ;
+; 1.758 ; qout[1]~reg0 ; counter8421:ten|qout[3] ; clk          ; counter8421:one|qout[0] ; -0.500       ; 1.087      ; 2.630      ;
+; 1.758 ; qout[1]~reg0 ; counter8421:ten|qout[0] ; clk          ; counter8421:one|qout[0] ; -0.500       ; 1.087      ; 2.630      ;
+; 1.758 ; qout[1]~reg0 ; counter8421:ten|qout[1] ; clk          ; counter8421:one|qout[0] ; -0.500       ; 1.087      ; 2.630      ;
+; 1.758 ; qout[1]~reg0 ; counter8421:ten|qout[2] ; clk          ; counter8421:one|qout[0] ; -0.500       ; 1.087      ; 2.630      ;
+; 1.942 ; qout[7]~reg0 ; counter8421:ten|qout[3] ; clk          ; counter8421:one|qout[0] ; -0.500       ; 1.087      ; 2.814      ;
+; 1.942 ; qout[7]~reg0 ; counter8421:ten|qout[0] ; clk          ; counter8421:one|qout[0] ; -0.500       ; 1.087      ; 2.814      ;
+; 1.942 ; qout[7]~reg0 ; counter8421:ten|qout[1] ; clk          ; counter8421:one|qout[0] ; -0.500       ; 1.087      ; 2.814      ;
+; 1.942 ; qout[7]~reg0 ; counter8421:ten|qout[2] ; clk          ; counter8421:one|qout[0] ; -0.500       ; 1.087      ; 2.814      ;
+; 2.087 ; qout[5]~reg0 ; counter8421:ten|qout[3] ; clk          ; counter8421:one|qout[0] ; -0.500       ; 1.087      ; 2.959      ;
+; 2.087 ; qout[5]~reg0 ; counter8421:ten|qout[0] ; clk          ; counter8421:one|qout[0] ; -0.500       ; 1.087      ; 2.959      ;
+; 2.087 ; qout[5]~reg0 ; counter8421:ten|qout[1] ; clk          ; counter8421:one|qout[0] ; -0.500       ; 1.087      ; 2.959      ;
+; 2.087 ; qout[5]~reg0 ; counter8421:ten|qout[2] ; clk          ; counter8421:one|qout[0] ; -0.500       ; 1.087      ; 2.959      ;
++-------+--------------+-------------------------+--------------+-------------------------+--------------+------------+------------+
+
+
++----------------------------------------------------------------------------------------------------------------------+
+; Slow 1000mV 0C Model Removal: 'clk'                                                                                  ;
++-------+--------------+-------------------------+--------------+-------------+--------------+------------+------------+
+; Slack ; From Node    ; To Node                 ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++-------+--------------+-------------------------+--------------+-------------+--------------+------------+------------+
+; 2.660 ; qout[4]~reg0 ; counter8421:one|qout[0] ; clk          ; clk         ; -0.500       ; 0.003      ; 2.438      ;
+; 2.758 ; qout[3]~reg0 ; counter8421:one|qout[0] ; clk          ; clk         ; -0.500       ; 0.003      ; 2.536      ;
+; 2.771 ; qout[0]~reg0 ; counter8421:one|qout[0] ; clk          ; clk         ; -0.500       ; 0.003      ; 2.549      ;
+; 2.775 ; qout[2]~reg0 ; counter8421:one|qout[0] ; clk          ; clk         ; -0.500       ; 0.003      ; 2.553      ;
+; 3.003 ; qout[6]~reg0 ; counter8421:one|qout[0] ; clk          ; clk         ; -0.500       ; 0.003      ; 2.781      ;
+; 3.053 ; qout[1]~reg0 ; counter8421:one|qout[0] ; clk          ; clk         ; -0.500       ; 0.003      ; 2.831      ;
+; 3.237 ; qout[7]~reg0 ; counter8421:one|qout[0] ; clk          ; clk         ; -0.500       ; 0.003      ; 3.015      ;
+; 3.382 ; qout[5]~reg0 ; counter8421:one|qout[0] ; clk          ; clk         ; -0.500       ; 0.003      ; 3.160      ;
+; 3.682 ; qout[4]~reg0 ; counter8421:one|qout[2] ; clk          ; clk         ; -0.500       ; -1.019     ; 2.438      ;
+; 3.682 ; qout[4]~reg0 ; counter8421:one|qout[3] ; clk          ; clk         ; -0.500       ; -1.019     ; 2.438      ;
+; 3.682 ; qout[4]~reg0 ; counter8421:one|qout[1] ; clk          ; clk         ; -0.500       ; -1.019     ; 2.438      ;
+; 3.780 ; qout[3]~reg0 ; counter8421:one|qout[2] ; clk          ; clk         ; -0.500       ; -1.019     ; 2.536      ;
+; 3.780 ; qout[3]~reg0 ; counter8421:one|qout[3] ; clk          ; clk         ; -0.500       ; -1.019     ; 2.536      ;
+; 3.780 ; qout[3]~reg0 ; counter8421:one|qout[1] ; clk          ; clk         ; -0.500       ; -1.019     ; 2.536      ;
+; 3.793 ; qout[0]~reg0 ; counter8421:one|qout[2] ; clk          ; clk         ; -0.500       ; -1.019     ; 2.549      ;
+; 3.793 ; qout[0]~reg0 ; counter8421:one|qout[3] ; clk          ; clk         ; -0.500       ; -1.019     ; 2.549      ;
+; 3.793 ; qout[0]~reg0 ; counter8421:one|qout[1] ; clk          ; clk         ; -0.500       ; -1.019     ; 2.549      ;
+; 3.797 ; qout[2]~reg0 ; counter8421:one|qout[2] ; clk          ; clk         ; -0.500       ; -1.019     ; 2.553      ;
+; 3.797 ; qout[2]~reg0 ; counter8421:one|qout[3] ; clk          ; clk         ; -0.500       ; -1.019     ; 2.553      ;
+; 3.797 ; qout[2]~reg0 ; counter8421:one|qout[1] ; clk          ; clk         ; -0.500       ; -1.019     ; 2.553      ;
+; 4.025 ; qout[6]~reg0 ; counter8421:one|qout[2] ; clk          ; clk         ; -0.500       ; -1.019     ; 2.781      ;
+; 4.025 ; qout[6]~reg0 ; counter8421:one|qout[3] ; clk          ; clk         ; -0.500       ; -1.019     ; 2.781      ;
+; 4.025 ; qout[6]~reg0 ; counter8421:one|qout[1] ; clk          ; clk         ; -0.500       ; -1.019     ; 2.781      ;
+; 4.075 ; qout[1]~reg0 ; counter8421:one|qout[2] ; clk          ; clk         ; -0.500       ; -1.019     ; 2.831      ;
+; 4.075 ; qout[1]~reg0 ; counter8421:one|qout[3] ; clk          ; clk         ; -0.500       ; -1.019     ; 2.831      ;
+; 4.075 ; qout[1]~reg0 ; counter8421:one|qout[1] ; clk          ; clk         ; -0.500       ; -1.019     ; 2.831      ;
+; 4.259 ; qout[7]~reg0 ; counter8421:one|qout[2] ; clk          ; clk         ; -0.500       ; -1.019     ; 3.015      ;
+; 4.259 ; qout[7]~reg0 ; counter8421:one|qout[3] ; clk          ; clk         ; -0.500       ; -1.019     ; 3.015      ;
+; 4.259 ; qout[7]~reg0 ; counter8421:one|qout[1] ; clk          ; clk         ; -0.500       ; -1.019     ; 3.015      ;
+; 4.404 ; qout[5]~reg0 ; counter8421:one|qout[2] ; clk          ; clk         ; -0.500       ; -1.019     ; 3.160      ;
+; 4.404 ; qout[5]~reg0 ; counter8421:one|qout[3] ; clk          ; clk         ; -0.500       ; -1.019     ; 3.160      ;
+; 4.404 ; qout[5]~reg0 ; counter8421:one|qout[1] ; clk          ; clk         ; -0.500       ; -1.019     ; 3.160      ;
++-------+--------------+-------------------------+--------------+-------------+--------------+------------+------------+
+
+
+----------------------------------------------
+; Slow 1000mV 0C Model Metastability Summary ;
+----------------------------------------------
+No synchronizer chains to report.
+
+
++--------------------------------------------------+
+; Fast 1000mV 0C Model Setup Summary               ;
++-------------------------+--------+---------------+
+; Clock                   ; Slack  ; End Point TNS ;
++-------------------------+--------+---------------+
+; clk                     ; -0.887 ; -6.467        ;
+; counter8421:one|qout[0] ; -0.109 ; -0.363        ;
++-------------------------+--------+---------------+
+
+
++-------------------------------------------------+
+; Fast 1000mV 0C Model Hold Summary               ;
++-------------------------+-------+---------------+
+; Clock                   ; Slack ; End Point TNS ;
++-------------------------+-------+---------------+
+; clk                     ; 0.439 ; 0.000         ;
+; counter8421:one|qout[0] ; 0.509 ; 0.000         ;
++-------------------------+-------+---------------+
+
+
++--------------------------------------------------+
+; Fast 1000mV 0C Model Recovery Summary            ;
++-------------------------+--------+---------------+
+; Clock                   ; Slack  ; End Point TNS ;
++-------------------------+--------+---------------+
+; clk                     ; -2.249 ; -8.152        ;
+; counter8421:one|qout[0] ; -1.001 ; -4.004        ;
++-------------------------+--------+---------------+
+
+
++-------------------------------------------------+
+; Fast 1000mV 0C Model Removal Summary            ;
++-------------------------+-------+---------------+
+; Clock                   ; Slack ; End Point TNS ;
++-------------------------+-------+---------------+
+; counter8421:one|qout[0] ; 0.923 ; 0.000         ;
+; clk                     ; 1.404 ; 0.000         ;
++-------------------------+-------+---------------+
+
+
++--------------------------------------------------+
+; Fast 1000mV 0C Model Minimum Pulse Width Summary ;
++-------------------------+--------+---------------+
+; Clock                   ; Slack  ; End Point TNS ;
++-------------------------+--------+---------------+
+; clk                     ; -3.000 ; -24.156       ;
+; counter8421:one|qout[0] ; -1.763 ; -7.052        ;
++-------------------------+--------+---------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------+
+; Fast 1000mV 0C Model Setup: 'clk'                                                                                                           ;
++--------+-------------------------+-------------------------+-------------------------+-------------+--------------+------------+------------+
+; Slack  ; From Node               ; To Node                 ; Launch Clock            ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++--------+-------------------------+-------------------------+-------------------------+-------------+--------------+------------+------------+
+; -0.887 ; counter8421:ten|qout[3] ; qout[7]~reg0            ; counter8421:one|qout[0] ; clk         ; 0.500        ; -0.677     ; 0.693      ;
+; -0.886 ; counter8421:ten|qout[0] ; qout[4]~reg0            ; counter8421:one|qout[0] ; clk         ; 0.500        ; -0.677     ; 0.692      ;
+; -0.875 ; counter8421:ten|qout[2] ; qout[6]~reg0            ; counter8421:one|qout[0] ; clk         ; 0.500        ; -0.677     ; 0.681      ;
+; -0.772 ; counter8421:ten|qout[1] ; qout[5]~reg0            ; counter8421:one|qout[0] ; clk         ; 0.500        ; -0.677     ; 0.578      ;
+; -0.720 ; counter8421:one|qout[0] ; qout[0]~reg0            ; counter8421:one|qout[0] ; clk         ; 0.500        ; 2.106      ; 3.473      ;
+; -0.663 ; counter8421:one|qout[3] ; counter8421:one|qout[3] ; clk                     ; clk         ; 1.000        ; -0.031     ; 1.625      ;
+; -0.648 ; counter8421:one|qout[2] ; counter8421:one|qout[2] ; clk                     ; clk         ; 1.000        ; -0.031     ; 1.610      ;
+; -0.604 ; counter8421:one|qout[3] ; counter8421:one|qout[2] ; clk                     ; clk         ; 1.000        ; -0.031     ; 1.566      ;
+; -0.602 ; counter8421:one|qout[2] ; counter8421:one|qout[3] ; clk                     ; clk         ; 1.000        ; -0.031     ; 1.564      ;
+; -0.594 ; counter8421:one|qout[3] ; counter8421:one|qout[1] ; clk                     ; clk         ; 1.000        ; -0.031     ; 1.556      ;
+; -0.426 ; counter8421:one|qout[1] ; counter8421:one|qout[3] ; clk                     ; clk         ; 1.000        ; -0.031     ; 1.388      ;
+; -0.425 ; counter8421:one|qout[1] ; counter8421:one|qout[2] ; clk                     ; clk         ; 1.000        ; -0.031     ; 1.387      ;
+; -0.419 ; counter8421:one|qout[1] ; counter8421:one|qout[1] ; clk                     ; clk         ; 1.000        ; -0.031     ; 1.381      ;
+; -0.384 ; counter8421:one|qout[3] ; counter8421:one|qout[0] ; clk                     ; clk         ; 1.000        ; 0.772      ; 2.149      ;
+; -0.376 ; counter8421:one|qout[0] ; counter8421:one|qout[0] ; counter8421:one|qout[0] ; clk         ; 0.500        ; 2.368      ; 3.391      ;
+; -0.370 ; counter8421:one|qout[2] ; counter8421:one|qout[0] ; clk                     ; clk         ; 1.000        ; 0.772      ; 2.135      ;
+; -0.306 ; counter8421:one|qout[1] ; counter8421:one|qout[0] ; clk                     ; clk         ; 1.000        ; 0.772      ; 2.071      ;
+; -0.299 ; counter8421:one|qout[0] ; counter8421:one|qout[1] ; counter8421:one|qout[0] ; clk         ; 0.500        ; 1.548      ; 2.494      ;
+; -0.295 ; counter8421:one|qout[0] ; counter8421:one|qout[2] ; counter8421:one|qout[0] ; clk         ; 0.500        ; 1.548      ; 2.490      ;
+; -0.290 ; counter8421:one|qout[0] ; counter8421:one|qout[3] ; counter8421:one|qout[0] ; clk         ; 0.500        ; 1.548      ; 2.485      ;
+; -0.027 ; counter8421:one|qout[1] ; qout[1]~reg0            ; clk                     ; clk         ; 0.500        ; 0.510      ; 1.030      ;
+; -0.011 ; counter8421:one|qout[2] ; qout[2]~reg0            ; clk                     ; clk         ; 0.500        ; 0.510      ; 1.014      ;
+; -0.001 ; counter8421:one|qout[0] ; qout[0]~reg0            ; counter8421:one|qout[0] ; clk         ; 1.000        ; 2.106      ; 3.254      ;
+; 0.076  ; counter8421:one|qout[0] ; counter8421:one|qout[1] ; counter8421:one|qout[0] ; clk         ; 1.000        ; 1.548      ; 2.619      ;
+; 0.079  ; counter8421:one|qout[0] ; counter8421:one|qout[2] ; counter8421:one|qout[0] ; clk         ; 1.000        ; 1.548      ; 2.616      ;
+; 0.082  ; counter8421:one|qout[0] ; counter8421:one|qout[3] ; counter8421:one|qout[0] ; clk         ; 1.000        ; 1.548      ; 2.613      ;
+; 0.085  ; counter8421:one|qout[0] ; counter8421:one|qout[0] ; counter8421:one|qout[0] ; clk         ; 1.000        ; 2.368      ; 3.430      ;
+; 0.094  ; counter8421:one|qout[3] ; qout[3]~reg0            ; clk                     ; clk         ; 0.500        ; 0.510      ; 0.909      ;
++--------+-------------------------+-------------------------+-------------------------+-------------+--------------+------------+------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Fast 1000mV 0C Model Setup: 'counter8421:one|qout[0]'                                                                                                   ;
++--------+-------------------------+-------------------------+-------------------------+-------------------------+--------------+------------+------------+
+; Slack  ; From Node               ; To Node                 ; Launch Clock            ; Latch Clock             ; Relationship ; Clock Skew ; Data Delay ;
++--------+-------------------------+-------------------------+-------------------------+-------------------------+--------------+------------+------------+
+; -0.109 ; counter8421:ten|qout[0] ; counter8421:ten|qout[1] ; counter8421:one|qout[0] ; counter8421:one|qout[0] ; 1.000        ; -0.058     ; 1.044      ;
+; -0.107 ; counter8421:ten|qout[3] ; counter8421:ten|qout[3] ; counter8421:one|qout[0] ; counter8421:one|qout[0] ; 1.000        ; -0.058     ; 1.042      ;
+; -0.092 ; counter8421:ten|qout[3] ; counter8421:ten|qout[1] ; counter8421:one|qout[0] ; counter8421:one|qout[0] ; 1.000        ; -0.058     ; 1.027      ;
+; -0.086 ; counter8421:ten|qout[3] ; counter8421:ten|qout[2] ; counter8421:one|qout[0] ; counter8421:one|qout[0] ; 1.000        ; -0.058     ; 1.021      ;
+; -0.081 ; counter8421:ten|qout[2] ; counter8421:ten|qout[3] ; counter8421:one|qout[0] ; counter8421:one|qout[0] ; 1.000        ; -0.058     ; 1.016      ;
+; -0.061 ; counter8421:ten|qout[1] ; counter8421:ten|qout[0] ; counter8421:one|qout[0] ; counter8421:one|qout[0] ; 1.000        ; -0.058     ; 0.996      ;
+; -0.052 ; counter8421:ten|qout[0] ; counter8421:ten|qout[2] ; counter8421:one|qout[0] ; counter8421:one|qout[0] ; 1.000        ; -0.058     ; 0.987      ;
+; -0.049 ; counter8421:ten|qout[2] ; counter8421:ten|qout[0] ; counter8421:one|qout[0] ; counter8421:one|qout[0] ; 1.000        ; -0.058     ; 0.984      ;
+; 0.006  ; counter8421:ten|qout[0] ; counter8421:ten|qout[3] ; counter8421:one|qout[0] ; counter8421:one|qout[0] ; 1.000        ; -0.058     ; 0.929      ;
+; 0.025  ; counter8421:ten|qout[2] ; counter8421:ten|qout[2] ; counter8421:one|qout[0] ; counter8421:one|qout[0] ; 1.000        ; -0.058     ; 0.910      ;
+; 0.054  ; counter8421:ten|qout[3] ; counter8421:ten|qout[0] ; counter8421:one|qout[0] ; counter8421:one|qout[0] ; 1.000        ; -0.058     ; 0.881      ;
+; 0.062  ; counter8421:ten|qout[0] ; counter8421:ten|qout[0] ; counter8421:one|qout[0] ; counter8421:one|qout[0] ; 1.000        ; -0.058     ; 0.873      ;
+; 0.124  ; counter8421:ten|qout[1] ; counter8421:ten|qout[1] ; counter8421:one|qout[0] ; counter8421:one|qout[0] ; 1.000        ; -0.058     ; 0.811      ;
+; 0.127  ; counter8421:ten|qout[1] ; counter8421:ten|qout[3] ; counter8421:one|qout[0] ; counter8421:one|qout[0] ; 1.000        ; -0.058     ; 0.808      ;
+; 0.129  ; counter8421:ten|qout[1] ; counter8421:ten|qout[2] ; counter8421:one|qout[0] ; counter8421:one|qout[0] ; 1.000        ; -0.058     ; 0.806      ;
++--------+-------------------------+-------------------------+-------------------------+-------------------------+--------------+------------+------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------+
+; Fast 1000mV 0C Model Hold: 'clk'                                                                                                           ;
++-------+-------------------------+-------------------------+-------------------------+-------------+--------------+------------+------------+
+; Slack ; From Node               ; To Node                 ; Launch Clock            ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++-------+-------------------------+-------------------------+-------------------------+-------------+--------------+------------+------------+
+; 0.439 ; counter8421:one|qout[0] ; counter8421:one|qout[2] ; counter8421:one|qout[0] ; clk         ; 0.000        ; 1.596      ; 2.356      ;
+; 0.440 ; counter8421:one|qout[0] ; counter8421:one|qout[1] ; counter8421:one|qout[0] ; clk         ; 0.000        ; 1.596      ; 2.357      ;
+; 0.506 ; counter8421:one|qout[0] ; counter8421:one|qout[3] ; counter8421:one|qout[0] ; clk         ; 0.000        ; 1.596      ; 2.423      ;
+; 0.520 ; counter8421:one|qout[0] ; counter8421:one|qout[0] ; counter8421:one|qout[0] ; clk         ; 0.000        ; 2.450      ; 3.291      ;
+; 0.527 ; counter8421:one|qout[3] ; qout[3]~reg0            ; clk                     ; clk         ; -0.500       ; 0.641      ; 0.815      ;
+; 0.536 ; counter8421:one|qout[1] ; qout[1]~reg0            ; clk                     ; clk         ; -0.500       ; 0.641      ; 0.824      ;
+; 0.619 ; counter8421:one|qout[2] ; qout[2]~reg0            ; clk                     ; clk         ; -0.500       ; 0.641      ; 0.907      ;
+; 0.620 ; counter8421:one|qout[0] ; qout[0]~reg0            ; counter8421:one|qout[0] ; clk         ; 0.000        ; 2.189      ; 3.130      ;
+; 0.841 ; counter8421:one|qout[0] ; counter8421:one|qout[2] ; counter8421:one|qout[0] ; clk         ; -0.500       ; 1.596      ; 2.258      ;
+; 0.844 ; counter8421:one|qout[0] ; counter8421:one|qout[1] ; counter8421:one|qout[0] ; clk         ; -0.500       ; 1.596      ; 2.261      ;
+; 0.907 ; counter8421:one|qout[0] ; counter8421:one|qout[3] ; counter8421:one|qout[0] ; clk         ; -0.500       ; 1.596      ; 2.324      ;
+; 0.932 ; counter8421:one|qout[1] ; counter8421:one|qout[0] ; clk                     ; clk         ; 0.000        ; 0.902      ; 1.961      ;
+; 0.975 ; counter8421:one|qout[0] ; counter8421:one|qout[0] ; counter8421:one|qout[0] ; clk         ; -0.500       ; 2.450      ; 3.246      ;
+; 0.977 ; counter8421:one|qout[1] ; counter8421:one|qout[1] ; clk                     ; clk         ; 0.000        ; 0.031      ; 1.135      ;
+; 0.984 ; counter8421:one|qout[1] ; counter8421:one|qout[2] ; clk                     ; clk         ; 0.000        ; 0.031      ; 1.142      ;
+; 0.985 ; counter8421:one|qout[3] ; counter8421:one|qout[0] ; clk                     ; clk         ; 0.000        ; 0.902      ; 2.014      ;
+; 1.003 ; counter8421:one|qout[2] ; counter8421:one|qout[0] ; clk                     ; clk         ; 0.000        ; 0.902      ; 2.032      ;
+; 1.054 ; counter8421:one|qout[1] ; counter8421:one|qout[3] ; clk                     ; clk         ; 0.000        ; 0.031      ; 1.212      ;
+; 1.129 ; counter8421:one|qout[2] ; counter8421:one|qout[2] ; clk                     ; clk         ; 0.000        ; 0.031      ; 1.287      ;
+; 1.201 ; counter8421:one|qout[2] ; counter8421:one|qout[3] ; clk                     ; clk         ; 0.000        ; 0.031      ; 1.359      ;
+; 1.205 ; counter8421:one|qout[3] ; counter8421:one|qout[1] ; clk                     ; clk         ; 0.000        ; 0.031      ; 1.363      ;
+; 1.208 ; counter8421:one|qout[3] ; counter8421:one|qout[2] ; clk                     ; clk         ; 0.000        ; 0.031      ; 1.366      ;
+; 1.253 ; counter8421:one|qout[3] ; counter8421:one|qout[3] ; clk                     ; clk         ; 0.000        ; 0.031      ; 1.411      ;
+; 1.300 ; counter8421:ten|qout[1] ; qout[5]~reg0            ; counter8421:one|qout[0] ; clk         ; -0.500       ; -0.471     ; 0.486      ;
+; 1.331 ; counter8421:one|qout[0] ; qout[0]~reg0            ; counter8421:one|qout[0] ; clk         ; -0.500       ; 2.189      ; 3.341      ;
+; 1.377 ; counter8421:ten|qout[2] ; qout[6]~reg0            ; counter8421:one|qout[0] ; clk         ; -0.500       ; -0.471     ; 0.563      ;
+; 1.388 ; counter8421:ten|qout[3] ; qout[7]~reg0            ; counter8421:one|qout[0] ; clk         ; -0.500       ; -0.471     ; 0.574      ;
+; 1.432 ; counter8421:ten|qout[0] ; qout[4]~reg0            ; counter8421:one|qout[0] ; clk         ; -0.500       ; -0.471     ; 0.618      ;
++-------+-------------------------+-------------------------+-------------------------+-------------+--------------+------------+------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Fast 1000mV 0C Model Hold: 'counter8421:one|qout[0]'                                                                                                   ;
++-------+-------------------------+-------------------------+-------------------------+-------------------------+--------------+------------+------------+
+; Slack ; From Node               ; To Node                 ; Launch Clock            ; Latch Clock             ; Relationship ; Clock Skew ; Data Delay ;
++-------+-------------------------+-------------------------+-------------------------+-------------------------+--------------+------------+------------+
+; 0.509 ; counter8421:ten|qout[1] ; counter8421:ten|qout[2] ; counter8421:one|qout[0] ; counter8421:one|qout[0] ; 0.000        ; 0.058      ; 0.694      ;
+; 0.511 ; counter8421:ten|qout[1] ; counter8421:ten|qout[3] ; counter8421:one|qout[0] ; counter8421:one|qout[0] ; 0.000        ; 0.058      ; 0.696      ;
+; 0.515 ; counter8421:ten|qout[1] ; counter8421:ten|qout[1] ; counter8421:one|qout[0] ; counter8421:one|qout[0] ; 0.000        ; 0.058      ; 0.700      ;
+; 0.588 ; counter8421:ten|qout[2] ; counter8421:ten|qout[2] ; counter8421:one|qout[0] ; counter8421:one|qout[0] ; 0.000        ; 0.058      ; 0.773      ;
+; 0.597 ; counter8421:ten|qout[0] ; counter8421:ten|qout[0] ; counter8421:one|qout[0] ; counter8421:one|qout[0] ; 0.000        ; 0.058      ; 0.782      ;
+; 0.607 ; counter8421:ten|qout[0] ; counter8421:ten|qout[3] ; counter8421:one|qout[0] ; counter8421:one|qout[0] ; 0.000        ; 0.058      ; 0.792      ;
+; 0.610 ; counter8421:ten|qout[3] ; counter8421:ten|qout[0] ; counter8421:one|qout[0] ; counter8421:one|qout[0] ; 0.000        ; 0.058      ; 0.795      ;
+; 0.654 ; counter8421:ten|qout[2] ; counter8421:ten|qout[3] ; counter8421:one|qout[0] ; counter8421:one|qout[0] ; 0.000        ; 0.058      ; 0.839      ;
+; 0.667 ; counter8421:ten|qout[0] ; counter8421:ten|qout[2] ; counter8421:one|qout[0] ; counter8421:one|qout[0] ; 0.000        ; 0.058      ; 0.852      ;
+; 0.683 ; counter8421:ten|qout[3] ; counter8421:ten|qout[1] ; counter8421:one|qout[0] ; counter8421:one|qout[0] ; 0.000        ; 0.058      ; 0.868      ;
+; 0.685 ; counter8421:ten|qout[3] ; counter8421:ten|qout[2] ; counter8421:one|qout[0] ; counter8421:one|qout[0] ; 0.000        ; 0.058      ; 0.870      ;
+; 0.695 ; counter8421:ten|qout[0] ; counter8421:ten|qout[1] ; counter8421:one|qout[0] ; counter8421:one|qout[0] ; 0.000        ; 0.058      ; 0.880      ;
+; 0.703 ; counter8421:ten|qout[1] ; counter8421:ten|qout[0] ; counter8421:one|qout[0] ; counter8421:one|qout[0] ; 0.000        ; 0.058      ; 0.888      ;
+; 0.704 ; counter8421:ten|qout[3] ; counter8421:ten|qout[3] ; counter8421:one|qout[0] ; counter8421:one|qout[0] ; 0.000        ; 0.058      ; 0.889      ;
+; 0.708 ; counter8421:ten|qout[2] ; counter8421:ten|qout[0] ; counter8421:one|qout[0] ; counter8421:one|qout[0] ; 0.000        ; 0.058      ; 0.893      ;
++-------+-------------------------+-------------------------+-------------------------+-------------------------+--------------+------------+------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------+
+; Fast 1000mV 0C Model Recovery: 'clk'                                                                                  ;
++--------+--------------+-------------------------+--------------+-------------+--------------+------------+------------+
+; Slack  ; From Node    ; To Node                 ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++--------+--------------+-------------------------+--------------+-------------+--------------+------------+------------+
+; -2.249 ; qout[5]~reg0 ; counter8421:one|qout[2] ; clk          ; clk         ; 0.500        ; -0.641     ; 2.101      ;
+; -2.249 ; qout[5]~reg0 ; counter8421:one|qout[3] ; clk          ; clk         ; 0.500        ; -0.641     ; 2.101      ;
+; -2.249 ; qout[5]~reg0 ; counter8421:one|qout[1] ; clk          ; clk         ; 0.500        ; -0.641     ; 2.101      ;
+; -2.227 ; qout[7]~reg0 ; counter8421:one|qout[2] ; clk          ; clk         ; 0.500        ; -0.641     ; 2.079      ;
+; -2.227 ; qout[7]~reg0 ; counter8421:one|qout[3] ; clk          ; clk         ; 0.500        ; -0.641     ; 2.079      ;
+; -2.227 ; qout[7]~reg0 ; counter8421:one|qout[1] ; clk          ; clk         ; 0.500        ; -0.641     ; 2.079      ;
+; -2.000 ; qout[6]~reg0 ; counter8421:one|qout[2] ; clk          ; clk         ; 0.500        ; -0.641     ; 1.852      ;
+; -2.000 ; qout[6]~reg0 ; counter8421:one|qout[3] ; clk          ; clk         ; 0.500        ; -0.641     ; 1.852      ;
+; -2.000 ; qout[6]~reg0 ; counter8421:one|qout[1] ; clk          ; clk         ; 0.500        ; -0.641     ; 1.852      ;
+; -1.995 ; qout[1]~reg0 ; counter8421:one|qout[2] ; clk          ; clk         ; 0.500        ; -0.641     ; 1.847      ;
+; -1.995 ; qout[1]~reg0 ; counter8421:one|qout[3] ; clk          ; clk         ; 0.500        ; -0.641     ; 1.847      ;
+; -1.995 ; qout[1]~reg0 ; counter8421:one|qout[1] ; clk          ; clk         ; 0.500        ; -0.641     ; 1.847      ;
+; -1.770 ; qout[3]~reg0 ; counter8421:one|qout[2] ; clk          ; clk         ; 0.500        ; -0.641     ; 1.622      ;
+; -1.770 ; qout[3]~reg0 ; counter8421:one|qout[3] ; clk          ; clk         ; 0.500        ; -0.641     ; 1.622      ;
+; -1.770 ; qout[3]~reg0 ; counter8421:one|qout[1] ; clk          ; clk         ; 0.500        ; -0.641     ; 1.622      ;
+; -1.757 ; qout[0]~reg0 ; counter8421:one|qout[2] ; clk          ; clk         ; 0.500        ; -0.641     ; 1.609      ;
+; -1.757 ; qout[0]~reg0 ; counter8421:one|qout[3] ; clk          ; clk         ; 0.500        ; -0.641     ; 1.609      ;
+; -1.757 ; qout[0]~reg0 ; counter8421:one|qout[1] ; clk          ; clk         ; 0.500        ; -0.641     ; 1.609      ;
+; -1.715 ; qout[4]~reg0 ; counter8421:one|qout[2] ; clk          ; clk         ; 0.500        ; -0.641     ; 1.567      ;
+; -1.715 ; qout[4]~reg0 ; counter8421:one|qout[3] ; clk          ; clk         ; 0.500        ; -0.641     ; 1.567      ;
+; -1.715 ; qout[4]~reg0 ; counter8421:one|qout[1] ; clk          ; clk         ; 0.500        ; -0.641     ; 1.567      ;
+; -1.711 ; qout[2]~reg0 ; counter8421:one|qout[2] ; clk          ; clk         ; 0.500        ; -0.641     ; 1.563      ;
+; -1.711 ; qout[2]~reg0 ; counter8421:one|qout[3] ; clk          ; clk         ; 0.500        ; -0.641     ; 1.563      ;
+; -1.711 ; qout[2]~reg0 ; counter8421:one|qout[1] ; clk          ; clk         ; 0.500        ; -0.641     ; 1.563      ;
+; -1.405 ; qout[5]~reg0 ; counter8421:one|qout[0] ; clk          ; clk         ; 0.500        ; 0.203      ; 2.101      ;
+; -1.383 ; qout[7]~reg0 ; counter8421:one|qout[0] ; clk          ; clk         ; 0.500        ; 0.203      ; 2.079      ;
+; -1.156 ; qout[6]~reg0 ; counter8421:one|qout[0] ; clk          ; clk         ; 0.500        ; 0.203      ; 1.852      ;
+; -1.151 ; qout[1]~reg0 ; counter8421:one|qout[0] ; clk          ; clk         ; 0.500        ; 0.203      ; 1.847      ;
+; -0.926 ; qout[3]~reg0 ; counter8421:one|qout[0] ; clk          ; clk         ; 0.500        ; 0.203      ; 1.622      ;
+; -0.913 ; qout[0]~reg0 ; counter8421:one|qout[0] ; clk          ; clk         ; 0.500        ; 0.203      ; 1.609      ;
+; -0.871 ; qout[4]~reg0 ; counter8421:one|qout[0] ; clk          ; clk         ; 0.500        ; 0.203      ; 1.567      ;
+; -0.867 ; qout[2]~reg0 ; counter8421:one|qout[0] ; clk          ; clk         ; 0.500        ; 0.203      ; 1.563      ;
++--------+--------------+-------------------------+--------------+-------------+--------------+------------+------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------+
+; Fast 1000mV 0C Model Recovery: 'counter8421:one|qout[0]'                                                                          ;
++--------+--------------+-------------------------+--------------+-------------------------+--------------+------------+------------+
+; Slack  ; From Node    ; To Node                 ; Launch Clock ; Latch Clock             ; Relationship ; Clock Skew ; Data Delay ;
++--------+--------------+-------------------------+--------------+-------------------------+--------------+------------+------------+
+; -1.001 ; qout[5]~reg0 ; counter8421:ten|qout[3] ; clk          ; counter8421:one|qout[0] ; 0.500        ; 0.471      ; 1.955      ;
+; -1.001 ; qout[5]~reg0 ; counter8421:ten|qout[0] ; clk          ; counter8421:one|qout[0] ; 0.500        ; 0.471      ; 1.955      ;
+; -1.001 ; qout[5]~reg0 ; counter8421:ten|qout[1] ; clk          ; counter8421:one|qout[0] ; 0.500        ; 0.471      ; 1.955      ;
+; -1.001 ; qout[5]~reg0 ; counter8421:ten|qout[2] ; clk          ; counter8421:one|qout[0] ; 0.500        ; 0.471      ; 1.955      ;
+; -0.979 ; qout[7]~reg0 ; counter8421:ten|qout[3] ; clk          ; counter8421:one|qout[0] ; 0.500        ; 0.471      ; 1.933      ;
+; -0.979 ; qout[7]~reg0 ; counter8421:ten|qout[0] ; clk          ; counter8421:one|qout[0] ; 0.500        ; 0.471      ; 1.933      ;
+; -0.979 ; qout[7]~reg0 ; counter8421:ten|qout[1] ; clk          ; counter8421:one|qout[0] ; 0.500        ; 0.471      ; 1.933      ;
+; -0.979 ; qout[7]~reg0 ; counter8421:ten|qout[2] ; clk          ; counter8421:one|qout[0] ; 0.500        ; 0.471      ; 1.933      ;
+; -0.752 ; qout[6]~reg0 ; counter8421:ten|qout[3] ; clk          ; counter8421:one|qout[0] ; 0.500        ; 0.471      ; 1.706      ;
+; -0.752 ; qout[6]~reg0 ; counter8421:ten|qout[0] ; clk          ; counter8421:one|qout[0] ; 0.500        ; 0.471      ; 1.706      ;
+; -0.752 ; qout[6]~reg0 ; counter8421:ten|qout[1] ; clk          ; counter8421:one|qout[0] ; 0.500        ; 0.471      ; 1.706      ;
+; -0.752 ; qout[6]~reg0 ; counter8421:ten|qout[2] ; clk          ; counter8421:one|qout[0] ; 0.500        ; 0.471      ; 1.706      ;
+; -0.747 ; qout[1]~reg0 ; counter8421:ten|qout[3] ; clk          ; counter8421:one|qout[0] ; 0.500        ; 0.471      ; 1.701      ;
+; -0.747 ; qout[1]~reg0 ; counter8421:ten|qout[0] ; clk          ; counter8421:one|qout[0] ; 0.500        ; 0.471      ; 1.701      ;
+; -0.747 ; qout[1]~reg0 ; counter8421:ten|qout[1] ; clk          ; counter8421:one|qout[0] ; 0.500        ; 0.471      ; 1.701      ;
+; -0.747 ; qout[1]~reg0 ; counter8421:ten|qout[2] ; clk          ; counter8421:one|qout[0] ; 0.500        ; 0.471      ; 1.701      ;
+; -0.522 ; qout[3]~reg0 ; counter8421:ten|qout[3] ; clk          ; counter8421:one|qout[0] ; 0.500        ; 0.471      ; 1.476      ;
+; -0.522 ; qout[3]~reg0 ; counter8421:ten|qout[0] ; clk          ; counter8421:one|qout[0] ; 0.500        ; 0.471      ; 1.476      ;
+; -0.522 ; qout[3]~reg0 ; counter8421:ten|qout[1] ; clk          ; counter8421:one|qout[0] ; 0.500        ; 0.471      ; 1.476      ;
+; -0.522 ; qout[3]~reg0 ; counter8421:ten|qout[2] ; clk          ; counter8421:one|qout[0] ; 0.500        ; 0.471      ; 1.476      ;
+; -0.509 ; qout[0]~reg0 ; counter8421:ten|qout[3] ; clk          ; counter8421:one|qout[0] ; 0.500        ; 0.471      ; 1.463      ;
+; -0.509 ; qout[0]~reg0 ; counter8421:ten|qout[0] ; clk          ; counter8421:one|qout[0] ; 0.500        ; 0.471      ; 1.463      ;
+; -0.509 ; qout[0]~reg0 ; counter8421:ten|qout[1] ; clk          ; counter8421:one|qout[0] ; 0.500        ; 0.471      ; 1.463      ;
+; -0.509 ; qout[0]~reg0 ; counter8421:ten|qout[2] ; clk          ; counter8421:one|qout[0] ; 0.500        ; 0.471      ; 1.463      ;
+; -0.467 ; qout[4]~reg0 ; counter8421:ten|qout[3] ; clk          ; counter8421:one|qout[0] ; 0.500        ; 0.471      ; 1.421      ;
+; -0.467 ; qout[4]~reg0 ; counter8421:ten|qout[0] ; clk          ; counter8421:one|qout[0] ; 0.500        ; 0.471      ; 1.421      ;
+; -0.467 ; qout[4]~reg0 ; counter8421:ten|qout[1] ; clk          ; counter8421:one|qout[0] ; 0.500        ; 0.471      ; 1.421      ;
+; -0.467 ; qout[4]~reg0 ; counter8421:ten|qout[2] ; clk          ; counter8421:one|qout[0] ; 0.500        ; 0.471      ; 1.421      ;
+; -0.463 ; qout[2]~reg0 ; counter8421:ten|qout[3] ; clk          ; counter8421:one|qout[0] ; 0.500        ; 0.471      ; 1.417      ;
+; -0.463 ; qout[2]~reg0 ; counter8421:ten|qout[0] ; clk          ; counter8421:one|qout[0] ; 0.500        ; 0.471      ; 1.417      ;
+; -0.463 ; qout[2]~reg0 ; counter8421:ten|qout[1] ; clk          ; counter8421:one|qout[0] ; 0.500        ; 0.471      ; 1.417      ;
+; -0.463 ; qout[2]~reg0 ; counter8421:ten|qout[2] ; clk          ; counter8421:one|qout[0] ; 0.500        ; 0.471      ; 1.417      ;
++--------+--------------+-------------------------+--------------+-------------------------+--------------+------------+------------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------+
+; Fast 1000mV 0C Model Removal: 'counter8421:one|qout[0]'                                                                          ;
++-------+--------------+-------------------------+--------------+-------------------------+--------------+------------+------------+
+; Slack ; From Node    ; To Node                 ; Launch Clock ; Latch Clock             ; Relationship ; Clock Skew ; Data Delay ;
++-------+--------------+-------------------------+--------------+-------------------------+--------------+------------+------------+
+; 0.923 ; qout[4]~reg0 ; counter8421:ten|qout[3] ; clk          ; counter8421:one|qout[0] ; -0.500       ; 0.677      ; 1.257      ;
+; 0.923 ; qout[4]~reg0 ; counter8421:ten|qout[0] ; clk          ; counter8421:one|qout[0] ; -0.500       ; 0.677      ; 1.257      ;
+; 0.923 ; qout[4]~reg0 ; counter8421:ten|qout[1] ; clk          ; counter8421:one|qout[0] ; -0.500       ; 0.677      ; 1.257      ;
+; 0.923 ; qout[4]~reg0 ; counter8421:ten|qout[2] ; clk          ; counter8421:one|qout[0] ; -0.500       ; 0.677      ; 1.257      ;
+; 0.972 ; qout[2]~reg0 ; counter8421:ten|qout[3] ; clk          ; counter8421:one|qout[0] ; -0.500       ; 0.677      ; 1.306      ;
+; 0.972 ; qout[2]~reg0 ; counter8421:ten|qout[0] ; clk          ; counter8421:one|qout[0] ; -0.500       ; 0.677      ; 1.306      ;
+; 0.972 ; qout[2]~reg0 ; counter8421:ten|qout[1] ; clk          ; counter8421:one|qout[0] ; -0.500       ; 0.677      ; 1.306      ;
+; 0.972 ; qout[2]~reg0 ; counter8421:ten|qout[2] ; clk          ; counter8421:one|qout[0] ; -0.500       ; 0.677      ; 1.306      ;
+; 0.982 ; qout[3]~reg0 ; counter8421:ten|qout[3] ; clk          ; counter8421:one|qout[0] ; -0.500       ; 0.677      ; 1.316      ;
+; 0.982 ; qout[3]~reg0 ; counter8421:ten|qout[0] ; clk          ; counter8421:one|qout[0] ; -0.500       ; 0.677      ; 1.316      ;
+; 0.982 ; qout[3]~reg0 ; counter8421:ten|qout[1] ; clk          ; counter8421:one|qout[0] ; -0.500       ; 0.677      ; 1.316      ;
+; 0.982 ; qout[3]~reg0 ; counter8421:ten|qout[2] ; clk          ; counter8421:one|qout[0] ; -0.500       ; 0.677      ; 1.316      ;
+; 0.986 ; qout[0]~reg0 ; counter8421:ten|qout[3] ; clk          ; counter8421:one|qout[0] ; -0.500       ; 0.677      ; 1.320      ;
+; 0.986 ; qout[0]~reg0 ; counter8421:ten|qout[0] ; clk          ; counter8421:one|qout[0] ; -0.500       ; 0.677      ; 1.320      ;
+; 0.986 ; qout[0]~reg0 ; counter8421:ten|qout[1] ; clk          ; counter8421:one|qout[0] ; -0.500       ; 0.677      ; 1.320      ;
+; 0.986 ; qout[0]~reg0 ; counter8421:ten|qout[2] ; clk          ; counter8421:one|qout[0] ; -0.500       ; 0.677      ; 1.320      ;
+; 1.121 ; qout[6]~reg0 ; counter8421:ten|qout[3] ; clk          ; counter8421:one|qout[0] ; -0.500       ; 0.677      ; 1.455      ;
+; 1.121 ; qout[6]~reg0 ; counter8421:ten|qout[0] ; clk          ; counter8421:one|qout[0] ; -0.500       ; 0.677      ; 1.455      ;
+; 1.121 ; qout[6]~reg0 ; counter8421:ten|qout[1] ; clk          ; counter8421:one|qout[0] ; -0.500       ; 0.677      ; 1.455      ;
+; 1.121 ; qout[6]~reg0 ; counter8421:ten|qout[2] ; clk          ; counter8421:one|qout[0] ; -0.500       ; 0.677      ; 1.455      ;
+; 1.156 ; qout[1]~reg0 ; counter8421:ten|qout[3] ; clk          ; counter8421:one|qout[0] ; -0.500       ; 0.677      ; 1.490      ;
+; 1.156 ; qout[1]~reg0 ; counter8421:ten|qout[0] ; clk          ; counter8421:one|qout[0] ; -0.500       ; 0.677      ; 1.490      ;
+; 1.156 ; qout[1]~reg0 ; counter8421:ten|qout[1] ; clk          ; counter8421:one|qout[0] ; -0.500       ; 0.677      ; 1.490      ;
+; 1.156 ; qout[1]~reg0 ; counter8421:ten|qout[2] ; clk          ; counter8421:one|qout[0] ; -0.500       ; 0.677      ; 1.490      ;
+; 1.259 ; qout[7]~reg0 ; counter8421:ten|qout[3] ; clk          ; counter8421:one|qout[0] ; -0.500       ; 0.677      ; 1.593      ;
+; 1.259 ; qout[7]~reg0 ; counter8421:ten|qout[0] ; clk          ; counter8421:one|qout[0] ; -0.500       ; 0.677      ; 1.593      ;
+; 1.259 ; qout[7]~reg0 ; counter8421:ten|qout[1] ; clk          ; counter8421:one|qout[0] ; -0.500       ; 0.677      ; 1.593      ;
+; 1.259 ; qout[7]~reg0 ; counter8421:ten|qout[2] ; clk          ; counter8421:one|qout[0] ; -0.500       ; 0.677      ; 1.593      ;
+; 1.338 ; qout[5]~reg0 ; counter8421:ten|qout[3] ; clk          ; counter8421:one|qout[0] ; -0.500       ; 0.677      ; 1.672      ;
+; 1.338 ; qout[5]~reg0 ; counter8421:ten|qout[0] ; clk          ; counter8421:one|qout[0] ; -0.500       ; 0.677      ; 1.672      ;
+; 1.338 ; qout[5]~reg0 ; counter8421:ten|qout[1] ; clk          ; counter8421:one|qout[0] ; -0.500       ; 0.677      ; 1.672      ;
+; 1.338 ; qout[5]~reg0 ; counter8421:ten|qout[2] ; clk          ; counter8421:one|qout[0] ; -0.500       ; 0.677      ; 1.672      ;
++-------+--------------+-------------------------+--------------+-------------------------+--------------+------------+------------+
+
+
++----------------------------------------------------------------------------------------------------------------------+
+; Fast 1000mV 0C Model Removal: 'clk'                                                                                  ;
++-------+--------------+-------------------------+--------------+-------------+--------------+------------+------------+
+; Slack ; From Node    ; To Node                 ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++-------+--------------+-------------------------+--------------+-------------+--------------+------------+------------+
+; 1.404 ; qout[4]~reg0 ; counter8421:one|qout[0] ; clk          ; clk         ; -0.500       ; 0.320      ; 1.371      ;
+; 1.453 ; qout[2]~reg0 ; counter8421:one|qout[0] ; clk          ; clk         ; -0.500       ; 0.320      ; 1.420      ;
+; 1.463 ; qout[3]~reg0 ; counter8421:one|qout[0] ; clk          ; clk         ; -0.500       ; 0.320      ; 1.430      ;
+; 1.467 ; qout[0]~reg0 ; counter8421:one|qout[0] ; clk          ; clk         ; -0.500       ; 0.320      ; 1.434      ;
+; 1.602 ; qout[6]~reg0 ; counter8421:one|qout[0] ; clk          ; clk         ; -0.500       ; 0.320      ; 1.569      ;
+; 1.637 ; qout[1]~reg0 ; counter8421:one|qout[0] ; clk          ; clk         ; -0.500       ; 0.320      ; 1.604      ;
+; 1.740 ; qout[7]~reg0 ; counter8421:one|qout[0] ; clk          ; clk         ; -0.500       ; 0.320      ; 1.707      ;
+; 1.819 ; qout[5]~reg0 ; counter8421:one|qout[0] ; clk          ; clk         ; -0.500       ; 0.320      ; 1.786      ;
+; 2.234 ; qout[4]~reg0 ; counter8421:one|qout[2] ; clk          ; clk         ; -0.500       ; -0.510     ; 1.371      ;
+; 2.234 ; qout[4]~reg0 ; counter8421:one|qout[3] ; clk          ; clk         ; -0.500       ; -0.510     ; 1.371      ;
+; 2.234 ; qout[4]~reg0 ; counter8421:one|qout[1] ; clk          ; clk         ; -0.500       ; -0.510     ; 1.371      ;
+; 2.283 ; qout[2]~reg0 ; counter8421:one|qout[2] ; clk          ; clk         ; -0.500       ; -0.510     ; 1.420      ;
+; 2.283 ; qout[2]~reg0 ; counter8421:one|qout[3] ; clk          ; clk         ; -0.500       ; -0.510     ; 1.420      ;
+; 2.283 ; qout[2]~reg0 ; counter8421:one|qout[1] ; clk          ; clk         ; -0.500       ; -0.510     ; 1.420      ;
+; 2.293 ; qout[3]~reg0 ; counter8421:one|qout[2] ; clk          ; clk         ; -0.500       ; -0.510     ; 1.430      ;
+; 2.293 ; qout[3]~reg0 ; counter8421:one|qout[3] ; clk          ; clk         ; -0.500       ; -0.510     ; 1.430      ;
+; 2.293 ; qout[3]~reg0 ; counter8421:one|qout[1] ; clk          ; clk         ; -0.500       ; -0.510     ; 1.430      ;
+; 2.297 ; qout[0]~reg0 ; counter8421:one|qout[2] ; clk          ; clk         ; -0.500       ; -0.510     ; 1.434      ;
+; 2.297 ; qout[0]~reg0 ; counter8421:one|qout[3] ; clk          ; clk         ; -0.500       ; -0.510     ; 1.434      ;
+; 2.297 ; qout[0]~reg0 ; counter8421:one|qout[1] ; clk          ; clk         ; -0.500       ; -0.510     ; 1.434      ;
+; 2.432 ; qout[6]~reg0 ; counter8421:one|qout[2] ; clk          ; clk         ; -0.500       ; -0.510     ; 1.569      ;
+; 2.432 ; qout[6]~reg0 ; counter8421:one|qout[3] ; clk          ; clk         ; -0.500       ; -0.510     ; 1.569      ;
+; 2.432 ; qout[6]~reg0 ; counter8421:one|qout[1] ; clk          ; clk         ; -0.500       ; -0.510     ; 1.569      ;
+; 2.467 ; qout[1]~reg0 ; counter8421:one|qout[2] ; clk          ; clk         ; -0.500       ; -0.510     ; 1.604      ;
+; 2.467 ; qout[1]~reg0 ; counter8421:one|qout[3] ; clk          ; clk         ; -0.500       ; -0.510     ; 1.604      ;
+; 2.467 ; qout[1]~reg0 ; counter8421:one|qout[1] ; clk          ; clk         ; -0.500       ; -0.510     ; 1.604      ;
+; 2.570 ; qout[7]~reg0 ; counter8421:one|qout[2] ; clk          ; clk         ; -0.500       ; -0.510     ; 1.707      ;
+; 2.570 ; qout[7]~reg0 ; counter8421:one|qout[3] ; clk          ; clk         ; -0.500       ; -0.510     ; 1.707      ;
+; 2.570 ; qout[7]~reg0 ; counter8421:one|qout[1] ; clk          ; clk         ; -0.500       ; -0.510     ; 1.707      ;
+; 2.649 ; qout[5]~reg0 ; counter8421:one|qout[2] ; clk          ; clk         ; -0.500       ; -0.510     ; 1.786      ;
+; 2.649 ; qout[5]~reg0 ; counter8421:one|qout[3] ; clk          ; clk         ; -0.500       ; -0.510     ; 1.786      ;
+; 2.649 ; qout[5]~reg0 ; counter8421:one|qout[1] ; clk          ; clk         ; -0.500       ; -0.510     ; 1.786      ;
++-------+--------------+-------------------------+--------------+-------------+--------------+------------+------------+
+
+
+----------------------------------------------
+; Fast 1000mV 0C Model Metastability Summary ;
+----------------------------------------------
+No synchronizer chains to report.
+
+
++---------------------------------------------------------------------------------------+
+; Multicorner Timing Analysis Summary                                                   ;
++--------------------------+---------+-------+----------+---------+---------------------+
+; Clock                    ; Setup   ; Hold  ; Recovery ; Removal ; Minimum Pulse Width ;
++--------------------------+---------+-------+----------+---------+---------------------+
+; Worst-case Slack         ; -1.989  ; 0.417 ; -4.569   ; 0.923   ; -3.000              ;
+;  clk                     ; -1.989  ; 0.417 ; -4.569   ; 1.404   ; -3.000              ;
+;  counter8421:one|qout[0] ; -0.981  ; 0.509 ; -2.161   ; 0.923   ; -1.763              ;
+; Design-wide TNS          ; -20.771 ; 0.0   ; -25.649  ; 0.0     ; -31.208             ;
+;  clk                     ; -16.965 ; 0.000 ; -17.081  ; 0.000   ; -24.156             ;
+;  counter8421:one|qout[0] ; -3.806  ; 0.000 ; -8.644   ; 0.000   ; -7.052              ;
++--------------------------+---------+-------+----------+---------+---------------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Board Trace Model Assignments                                                                                                                                                                                                                                                                                                                                                                                    ;
++---------------+--------------+-------------------+-------------------------+-------------------------+---------------+---------------------+----------------+------------------+--------+------------------+------------------------+------------------------+--------------+---------------+-----------------+-------+---------------------+--------------------+---------------+-----------------+-------------+
+; Pin           ; I/O Standard ; Near Tline Length ; Near Tline L per Length ; Near Tline C per Length ; Near Series R ; Near Differential R ; Near Pull-up R ; Near Pull-down R ; Near C ; Far Tline Length ; Far Tline L per Length ; Far Tline C per Length ; Far Series R ; Far Pull-up R ; Far Pull-down R ; Far C ; Termination Voltage ; Far Differential R ; EBD File Name ; EBD Signal Name ; EBD Far-end ;
++---------------+--------------+-------------------+-------------------------+-------------------------+---------------+---------------------+----------------+------------------+--------+------------------+------------------------+------------------------+--------------+---------------+-----------------+-------+---------------------+--------------------+---------------+-----------------+-------------+
+; qout[0]       ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
+; qout[1]       ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
+; qout[2]       ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
+; qout[3]       ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
+; qout[4]       ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
+; qout[5]       ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
+; qout[6]       ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
+; qout[7]       ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
+; cout          ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
+; ~ALTERA_DCLK~ ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
+; ~ALTERA_nCEO~ ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
++---------------+--------------+-------------------+-------------------------+-------------------------+---------------+---------------------+----------------+------------------+--------+------------------+------------------------+------------------------+--------------+---------------+-----------------+-------+---------------------+--------------------+---------------+-----------------+-------------+
+
+
++----------------------------------------------------------------------------+
+; Input Transition Times                                                     ;
++-------------------------+--------------+-----------------+-----------------+
+; Pin                     ; I/O Standard ; 10-90 Rise Time ; 90-10 Fall Time ;
++-------------------------+--------------+-----------------+-----------------+
+; clk                     ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; rst                     ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; ~ALTERA_ASDO_DATA1~     ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; ~ALTERA_FLASH_nCE_nCSO~ ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; ~ALTERA_DATA0~          ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
++-------------------------+--------------+-----------------+-----------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Signal Integrity Metrics (Slow 1000mv 0c Model)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            ;
++---------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
+; Pin           ; I/O Standard ; Board Delay on Rise ; Board Delay on Fall ; Steady State Voh at FPGA Pin ; Steady State Vol at FPGA Pin ; Voh Max at FPGA Pin ; Vol Min at FPGA Pin ; Ringback Voltage on Rise at FPGA Pin ; Ringback Voltage on Fall at FPGA Pin ; 10-90 Rise Time at FPGA Pin ; 90-10 Fall Time at FPGA Pin ; Monotonic Rise at FPGA Pin ; Monotonic Fall at FPGA Pin ; Steady State Voh at Far-end ; Steady State Vol at Far-end ; Voh Max at Far-end ; Vol Min at Far-end ; Ringback Voltage on Rise at Far-end ; Ringback Voltage on Fall at Far-end ; 10-90 Rise Time at Far-end ; 90-10 Fall Time at Far-end ; Monotonic Rise at Far-end ; Monotonic Fall at Far-end ;
++---------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
+; qout[0]       ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 4.4e-09 V                    ; 2.38 V              ; -0.0186 V           ; 0.169 V                              ; 0.039 V                              ; 4.83e-10 s                  ; 4.69e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 4.4e-09 V                   ; 2.38 V             ; -0.0186 V          ; 0.169 V                             ; 0.039 V                             ; 4.83e-10 s                 ; 4.69e-10 s                 ; Yes                       ; Yes                       ;
+; qout[1]       ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 4.4e-09 V                    ; 2.38 V              ; -0.0186 V           ; 0.169 V                              ; 0.039 V                              ; 4.83e-10 s                  ; 4.69e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 4.4e-09 V                   ; 2.38 V             ; -0.0186 V          ; 0.169 V                             ; 0.039 V                             ; 4.83e-10 s                 ; 4.69e-10 s                 ; Yes                       ; Yes                       ;
+; qout[2]       ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 4.4e-09 V                    ; 2.38 V              ; -0.0186 V           ; 0.169 V                              ; 0.039 V                              ; 4.83e-10 s                  ; 4.69e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 4.4e-09 V                   ; 2.38 V             ; -0.0186 V          ; 0.169 V                             ; 0.039 V                             ; 4.83e-10 s                 ; 4.69e-10 s                 ; Yes                       ; Yes                       ;
+; qout[3]       ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 4.4e-09 V                    ; 2.38 V              ; -0.0186 V           ; 0.169 V                              ; 0.039 V                              ; 4.83e-10 s                  ; 4.69e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 4.4e-09 V                   ; 2.38 V             ; -0.0186 V          ; 0.169 V                             ; 0.039 V                             ; 4.83e-10 s                 ; 4.69e-10 s                 ; Yes                       ; Yes                       ;
+; qout[4]       ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 4.4e-09 V                    ; 2.38 V              ; -0.0186 V           ; 0.169 V                              ; 0.039 V                              ; 4.83e-10 s                  ; 4.69e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 4.4e-09 V                   ; 2.38 V             ; -0.0186 V          ; 0.169 V                             ; 0.039 V                             ; 4.83e-10 s                 ; 4.69e-10 s                 ; Yes                       ; Yes                       ;
+; qout[5]       ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 4.4e-09 V                    ; 2.38 V              ; -0.0186 V           ; 0.169 V                              ; 0.039 V                              ; 4.83e-10 s                  ; 4.69e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 4.4e-09 V                   ; 2.38 V             ; -0.0186 V          ; 0.169 V                             ; 0.039 V                             ; 4.83e-10 s                 ; 4.69e-10 s                 ; Yes                       ; Yes                       ;
+; qout[6]       ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 4.4e-09 V                    ; 2.38 V              ; -0.0186 V           ; 0.169 V                              ; 0.039 V                              ; 4.83e-10 s                  ; 4.69e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 4.4e-09 V                   ; 2.38 V             ; -0.0186 V          ; 0.169 V                             ; 0.039 V                             ; 4.83e-10 s                 ; 4.69e-10 s                 ; Yes                       ; Yes                       ;
+; qout[7]       ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 4.4e-09 V                    ; 2.38 V              ; -0.0186 V           ; 0.169 V                              ; 0.039 V                              ; 4.83e-10 s                  ; 4.69e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 4.4e-09 V                   ; 2.38 V             ; -0.0186 V          ; 0.169 V                             ; 0.039 V                             ; 4.83e-10 s                 ; 4.69e-10 s                 ; Yes                       ; Yes                       ;
+; cout          ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 4.4e-09 V                    ; 2.38 V              ; -0.0186 V           ; 0.169 V                              ; 0.039 V                              ; 4.83e-10 s                  ; 4.69e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 4.4e-09 V                   ; 2.38 V             ; -0.0186 V          ; 0.169 V                             ; 0.039 V                             ; 4.83e-10 s                 ; 4.69e-10 s                 ; Yes                       ; Yes                       ;
+; ~ALTERA_DCLK~ ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 3.66e-09 V                   ; 2.38 V              ; -0.0409 V           ; 0.148 V                              ; 0.093 V                              ; 2.82e-10 s                  ; 2.61e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 3.66e-09 V                  ; 2.38 V             ; -0.0409 V          ; 0.148 V                             ; 0.093 V                             ; 2.82e-10 s                 ; 2.61e-10 s                 ; Yes                       ; Yes                       ;
+; ~ALTERA_nCEO~ ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 5.58e-09 V                   ; 2.38 V              ; -0.0197 V           ; 0.141 V                              ; 0.044 V                              ; 4.69e-10 s                  ; 6.07e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 5.58e-09 V                  ; 2.38 V             ; -0.0197 V          ; 0.141 V                             ; 0.044 V                             ; 4.69e-10 s                 ; 6.07e-10 s                 ; Yes                       ; Yes                       ;
++---------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Signal Integrity Metrics (Slow 1000mv 85c Model)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           ;
++---------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
+; Pin           ; I/O Standard ; Board Delay on Rise ; Board Delay on Fall ; Steady State Voh at FPGA Pin ; Steady State Vol at FPGA Pin ; Voh Max at FPGA Pin ; Vol Min at FPGA Pin ; Ringback Voltage on Rise at FPGA Pin ; Ringback Voltage on Fall at FPGA Pin ; 10-90 Rise Time at FPGA Pin ; 90-10 Fall Time at FPGA Pin ; Monotonic Rise at FPGA Pin ; Monotonic Fall at FPGA Pin ; Steady State Voh at Far-end ; Steady State Vol at Far-end ; Voh Max at Far-end ; Vol Min at Far-end ; Ringback Voltage on Rise at Far-end ; Ringback Voltage on Fall at Far-end ; 10-90 Rise Time at Far-end ; 90-10 Fall Time at Far-end ; Monotonic Rise at Far-end ; Monotonic Fall at Far-end ;
++---------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
+; qout[0]       ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 7.16e-07 V                   ; 2.35 V              ; -0.0197 V           ; 0.101 V                              ; 0.101 V                              ; 6.39e-10 s                  ; 6.08e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 7.16e-07 V                  ; 2.35 V             ; -0.0197 V          ; 0.101 V                             ; 0.101 V                             ; 6.39e-10 s                 ; 6.08e-10 s                 ; Yes                       ; Yes                       ;
+; qout[1]       ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 7.16e-07 V                   ; 2.35 V              ; -0.0197 V           ; 0.101 V                              ; 0.101 V                              ; 6.39e-10 s                  ; 6.08e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 7.16e-07 V                  ; 2.35 V             ; -0.0197 V          ; 0.101 V                             ; 0.101 V                             ; 6.39e-10 s                 ; 6.08e-10 s                 ; Yes                       ; Yes                       ;
+; qout[2]       ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 7.16e-07 V                   ; 2.35 V              ; -0.0197 V           ; 0.101 V                              ; 0.101 V                              ; 6.39e-10 s                  ; 6.08e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 7.16e-07 V                  ; 2.35 V             ; -0.0197 V          ; 0.101 V                             ; 0.101 V                             ; 6.39e-10 s                 ; 6.08e-10 s                 ; Yes                       ; Yes                       ;
+; qout[3]       ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 7.16e-07 V                   ; 2.35 V              ; -0.0197 V           ; 0.101 V                              ; 0.101 V                              ; 6.39e-10 s                  ; 6.08e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 7.16e-07 V                  ; 2.35 V             ; -0.0197 V          ; 0.101 V                             ; 0.101 V                             ; 6.39e-10 s                 ; 6.08e-10 s                 ; Yes                       ; Yes                       ;
+; qout[4]       ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 7.16e-07 V                   ; 2.35 V              ; -0.0197 V           ; 0.101 V                              ; 0.101 V                              ; 6.39e-10 s                  ; 6.08e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 7.16e-07 V                  ; 2.35 V             ; -0.0197 V          ; 0.101 V                             ; 0.101 V                             ; 6.39e-10 s                 ; 6.08e-10 s                 ; Yes                       ; Yes                       ;
+; qout[5]       ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 7.16e-07 V                   ; 2.35 V              ; -0.0197 V           ; 0.101 V                              ; 0.101 V                              ; 6.39e-10 s                  ; 6.08e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 7.16e-07 V                  ; 2.35 V             ; -0.0197 V          ; 0.101 V                             ; 0.101 V                             ; 6.39e-10 s                 ; 6.08e-10 s                 ; Yes                       ; Yes                       ;
+; qout[6]       ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 7.16e-07 V                   ; 2.35 V              ; -0.0197 V           ; 0.101 V                              ; 0.101 V                              ; 6.39e-10 s                  ; 6.08e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 7.16e-07 V                  ; 2.35 V             ; -0.0197 V          ; 0.101 V                             ; 0.101 V                             ; 6.39e-10 s                 ; 6.08e-10 s                 ; Yes                       ; Yes                       ;
+; qout[7]       ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 7.16e-07 V                   ; 2.35 V              ; -0.0197 V           ; 0.101 V                              ; 0.101 V                              ; 6.39e-10 s                  ; 6.08e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 7.16e-07 V                  ; 2.35 V             ; -0.0197 V          ; 0.101 V                             ; 0.101 V                             ; 6.39e-10 s                 ; 6.08e-10 s                 ; Yes                       ; Yes                       ;
+; cout          ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 7.16e-07 V                   ; 2.35 V              ; -0.0197 V           ; 0.101 V                              ; 0.101 V                              ; 6.39e-10 s                  ; 6.08e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 7.16e-07 V                  ; 2.35 V             ; -0.0197 V          ; 0.101 V                             ; 0.101 V                             ; 6.39e-10 s                 ; 6.08e-10 s                 ; Yes                       ; Yes                       ;
+; ~ALTERA_DCLK~ ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 5.74e-07 V                   ; 2.36 V              ; -0.0252 V           ; 0.074 V                              ; 0.045 V                              ; 4e-10 s                     ; 3.57e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 5.74e-07 V                  ; 2.36 V             ; -0.0252 V          ; 0.074 V                             ; 0.045 V                             ; 4e-10 s                    ; 3.57e-10 s                 ; Yes                       ; Yes                       ;
+; ~ALTERA_nCEO~ ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 9.45e-07 V                   ; 2.35 V              ; -0.0165 V           ; 0.2 V                                ; 0.105 V                              ; 5.32e-10 s                  ; 7.76e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 9.45e-07 V                  ; 2.35 V             ; -0.0165 V          ; 0.2 V                               ; 0.105 V                             ; 5.32e-10 s                 ; 7.76e-10 s                 ; Yes                       ; Yes                       ;
++---------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Signal Integrity Metrics (Fast 1000mv 0c Model)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            ;
++---------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
+; Pin           ; I/O Standard ; Board Delay on Rise ; Board Delay on Fall ; Steady State Voh at FPGA Pin ; Steady State Vol at FPGA Pin ; Voh Max at FPGA Pin ; Vol Min at FPGA Pin ; Ringback Voltage on Rise at FPGA Pin ; Ringback Voltage on Fall at FPGA Pin ; 10-90 Rise Time at FPGA Pin ; 90-10 Fall Time at FPGA Pin ; Monotonic Rise at FPGA Pin ; Monotonic Fall at FPGA Pin ; Steady State Voh at Far-end ; Steady State Vol at Far-end ; Voh Max at Far-end ; Vol Min at Far-end ; Ringback Voltage on Rise at Far-end ; Ringback Voltage on Fall at Far-end ; 10-90 Rise Time at Far-end ; 90-10 Fall Time at Far-end ; Monotonic Rise at Far-end ; Monotonic Fall at Far-end ;
++---------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
+; qout[0]       ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 2.72e-08 V                   ; 2.71 V              ; -0.0204 V           ; 0.145 V                              ; 0.065 V                              ; 4.51e-10 s                  ; 4.12e-10 s                  ; No                         ; Yes                        ; 2.62 V                      ; 2.72e-08 V                  ; 2.71 V             ; -0.0204 V          ; 0.145 V                             ; 0.065 V                             ; 4.51e-10 s                 ; 4.12e-10 s                 ; No                        ; Yes                       ;
+; qout[1]       ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 2.72e-08 V                   ; 2.71 V              ; -0.0204 V           ; 0.145 V                              ; 0.065 V                              ; 4.51e-10 s                  ; 4.12e-10 s                  ; No                         ; Yes                        ; 2.62 V                      ; 2.72e-08 V                  ; 2.71 V             ; -0.0204 V          ; 0.145 V                             ; 0.065 V                             ; 4.51e-10 s                 ; 4.12e-10 s                 ; No                        ; Yes                       ;
+; qout[2]       ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 2.72e-08 V                   ; 2.71 V              ; -0.0204 V           ; 0.145 V                              ; 0.065 V                              ; 4.51e-10 s                  ; 4.12e-10 s                  ; No                         ; Yes                        ; 2.62 V                      ; 2.72e-08 V                  ; 2.71 V             ; -0.0204 V          ; 0.145 V                             ; 0.065 V                             ; 4.51e-10 s                 ; 4.12e-10 s                 ; No                        ; Yes                       ;
+; qout[3]       ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 2.72e-08 V                   ; 2.71 V              ; -0.0204 V           ; 0.145 V                              ; 0.065 V                              ; 4.51e-10 s                  ; 4.12e-10 s                  ; No                         ; Yes                        ; 2.62 V                      ; 2.72e-08 V                  ; 2.71 V             ; -0.0204 V          ; 0.145 V                             ; 0.065 V                             ; 4.51e-10 s                 ; 4.12e-10 s                 ; No                        ; Yes                       ;
+; qout[4]       ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 2.72e-08 V                   ; 2.71 V              ; -0.0204 V           ; 0.145 V                              ; 0.065 V                              ; 4.51e-10 s                  ; 4.12e-10 s                  ; No                         ; Yes                        ; 2.62 V                      ; 2.72e-08 V                  ; 2.71 V             ; -0.0204 V          ; 0.145 V                             ; 0.065 V                             ; 4.51e-10 s                 ; 4.12e-10 s                 ; No                        ; Yes                       ;
+; qout[5]       ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 2.72e-08 V                   ; 2.71 V              ; -0.0204 V           ; 0.145 V                              ; 0.065 V                              ; 4.51e-10 s                  ; 4.12e-10 s                  ; No                         ; Yes                        ; 2.62 V                      ; 2.72e-08 V                  ; 2.71 V             ; -0.0204 V          ; 0.145 V                             ; 0.065 V                             ; 4.51e-10 s                 ; 4.12e-10 s                 ; No                        ; Yes                       ;
+; qout[6]       ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 2.72e-08 V                   ; 2.71 V              ; -0.0204 V           ; 0.145 V                              ; 0.065 V                              ; 4.51e-10 s                  ; 4.12e-10 s                  ; No                         ; Yes                        ; 2.62 V                      ; 2.72e-08 V                  ; 2.71 V             ; -0.0204 V          ; 0.145 V                             ; 0.065 V                             ; 4.51e-10 s                 ; 4.12e-10 s                 ; No                        ; Yes                       ;
+; qout[7]       ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 2.72e-08 V                   ; 2.71 V              ; -0.0204 V           ; 0.145 V                              ; 0.065 V                              ; 4.51e-10 s                  ; 4.12e-10 s                  ; No                         ; Yes                        ; 2.62 V                      ; 2.72e-08 V                  ; 2.71 V             ; -0.0204 V          ; 0.145 V                             ; 0.065 V                             ; 4.51e-10 s                 ; 4.12e-10 s                 ; No                        ; Yes                       ;
+; cout          ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 2.72e-08 V                   ; 2.71 V              ; -0.0204 V           ; 0.145 V                              ; 0.065 V                              ; 4.51e-10 s                  ; 4.12e-10 s                  ; No                         ; Yes                        ; 2.62 V                      ; 2.72e-08 V                  ; 2.71 V             ; -0.0204 V          ; 0.145 V                             ; 0.065 V                             ; 4.51e-10 s                 ; 4.12e-10 s                 ; No                        ; Yes                       ;
+; ~ALTERA_DCLK~ ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 2.21e-08 V                   ; 2.74 V              ; -0.0824 V           ; 0.159 V                              ; 0.115 V                              ; 2.7e-10 s                   ; 2.18e-10 s                  ; No                         ; Yes                        ; 2.62 V                      ; 2.21e-08 V                  ; 2.74 V             ; -0.0824 V          ; 0.159 V                             ; 0.115 V                             ; 2.7e-10 s                  ; 2.18e-10 s                 ; No                        ; Yes                       ;
+; ~ALTERA_nCEO~ ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 3.55e-08 V                   ; 2.7 V               ; -0.0204 V           ; 0.273 V                              ; 0.058 V                              ; 3.2e-10 s                   ; 5.11e-10 s                  ; No                         ; Yes                        ; 2.62 V                      ; 3.55e-08 V                  ; 2.7 V              ; -0.0204 V          ; 0.273 V                             ; 0.058 V                             ; 3.2e-10 s                  ; 5.11e-10 s                 ; No                        ; Yes                       ;
++---------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
+
+
++-----------------------------------------------------------------------------------------------+
+; Setup Transfers                                                                               ;
++-------------------------+-------------------------+----------+----------+----------+----------+
+; From Clock              ; To Clock                ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
++-------------------------+-------------------------+----------+----------+----------+----------+
+; clk                     ; clk                     ; 0        ; 3        ; 0        ; 11       ;
+; counter8421:one|qout[0] ; clk                     ; 1        ; 5        ; 4        ; 4        ;
+; counter8421:one|qout[0] ; counter8421:one|qout[0] ; 0        ; 0        ; 0        ; 15       ;
++-------------------------+-------------------------+----------+----------+----------+----------+
+Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
+
+
++-----------------------------------------------------------------------------------------------+
+; Hold Transfers                                                                                ;
++-------------------------+-------------------------+----------+----------+----------+----------+
+; From Clock              ; To Clock                ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
++-------------------------+-------------------------+----------+----------+----------+----------+
+; clk                     ; clk                     ; 0        ; 3        ; 0        ; 11       ;
+; counter8421:one|qout[0] ; clk                     ; 1        ; 5        ; 4        ; 4        ;
+; counter8421:one|qout[0] ; counter8421:one|qout[0] ; 0        ; 0        ; 0        ; 15       ;
++-------------------------+-------------------------+----------+----------+----------+----------+
+Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
+
+
++----------------------------------------------------------------------------------+
+; Recovery Transfers                                                               ;
++------------+-------------------------+----------+----------+----------+----------+
+; From Clock ; To Clock                ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
++------------+-------------------------+----------+----------+----------+----------+
+; clk        ; clk                     ; 0        ; 0        ; 36       ; 0        ;
+; clk        ; counter8421:one|qout[0] ; 0        ; 0        ; 36       ; 0        ;
++------------+-------------------------+----------+----------+----------+----------+
+Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
+
+
++----------------------------------------------------------------------------------+
+; Removal Transfers                                                                ;
++------------+-------------------------+----------+----------+----------+----------+
+; From Clock ; To Clock                ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
++------------+-------------------------+----------+----------+----------+----------+
+; clk        ; clk                     ; 0        ; 0        ; 36       ; 0        ;
+; clk        ; counter8421:one|qout[0] ; 0        ; 0        ; 36       ; 0        ;
++------------+-------------------------+----------+----------+----------+----------+
+Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
+
+
+---------------
+; Report TCCS ;
+---------------
+No dedicated SERDES Transmitter circuitry present in device or used in design
+
+
+---------------
+; Report RSKM ;
+---------------
+No non-DPA dedicated SERDES Receiver circuitry present in device or used in design
+
+
++------------------------------------------------+
+; Unconstrained Paths Summary                    ;
++---------------------------------+-------+------+
+; Property                        ; Setup ; Hold ;
++---------------------------------+-------+------+
+; Illegal Clocks                  ; 0     ; 0    ;
+; Unconstrained Clocks            ; 0     ; 0    ;
+; Unconstrained Input Ports       ; 1     ; 1    ;
+; Unconstrained Input Port Paths  ; 8     ; 8    ;
+; Unconstrained Output Ports      ; 9     ; 9    ;
+; Unconstrained Output Port Paths ; 16    ; 16   ;
++---------------------------------+-------+------+
+
+
++------------------------------------------------------------------------+
+; Clock Status Summary                                                   ;
++-------------------------+-------------------------+------+-------------+
+; Target                  ; Clock                   ; Type ; Status      ;
++-------------------------+-------------------------+------+-------------+
+; clk                     ; clk                     ; Base ; Constrained ;
+; counter8421:one|qout[0] ; counter8421:one|qout[0] ; Base ; Constrained ;
++-------------------------+-------------------------+------+-------------+
+
+
++---------------------------------------------------------------------------------------------------+
+; Unconstrained Input Ports                                                                         ;
++------------+--------------------------------------------------------------------------------------+
+; Input Port ; Comment                                                                              ;
++------------+--------------------------------------------------------------------------------------+
+; rst        ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
++------------+--------------------------------------------------------------------------------------+
+
+
++-----------------------------------------------------------------------------------------------------+
+; Unconstrained Output Ports                                                                          ;
++-------------+---------------------------------------------------------------------------------------+
+; Output Port ; Comment                                                                               ;
++-------------+---------------------------------------------------------------------------------------+
+; cout        ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; qout[0]     ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; qout[1]     ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; qout[2]     ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; qout[3]     ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; qout[4]     ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; qout[5]     ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; qout[6]     ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; qout[7]     ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
++-------------+---------------------------------------------------------------------------------------+
+
+
++---------------------------------------------------------------------------------------------------+
+; Unconstrained Input Ports                                                                         ;
++------------+--------------------------------------------------------------------------------------+
+; Input Port ; Comment                                                                              ;
++------------+--------------------------------------------------------------------------------------+
+; rst        ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
++------------+--------------------------------------------------------------------------------------+
+
+
++-----------------------------------------------------------------------------------------------------+
+; Unconstrained Output Ports                                                                          ;
++-------------+---------------------------------------------------------------------------------------+
+; Output Port ; Comment                                                                               ;
++-------------+---------------------------------------------------------------------------------------+
+; cout        ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; qout[0]     ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; qout[1]     ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; qout[2]     ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; qout[3]     ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; qout[4]     ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; qout[5]     ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; qout[6]     ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; qout[7]     ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
++-------------+---------------------------------------------------------------------------------------+
+
+
++--------------------------+
+; Timing Analyzer Messages ;
++--------------------------+
+Info: *******************************************************************
+Info: Running Quartus Prime Timing Analyzer
+    Info: Version 18.1.0 Build 625 09/12/2018 SJ Standard Edition
+    Info: Processing started: Wed Apr 13 11:59:00 2022
+Info: Command: quartus_sta count60_8421 -c count60_8421
+Info: qsta_default_script.tcl version: #1
+Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
+Info (20030): Parallel compilation is enabled and will use 6 of the 6 processors detected
+Info (21077): Low junction temperature is 0 degrees C
+Info (21077): High junction temperature is 85 degrees C
+Critical Warning (332012): Synopsys Design Constraints File file not found: 'count60_8421.sdc'. A Synopsys Design Constraints File is required by the Timing Analyzer to get proper timing constraints. Without it, the Compiler will not properly optimize the design.
+Info (332142): No user constrained base clocks found in the design. Calling "derive_clocks -period 1.0"
+Info (332105): Deriving Clocks
+    Info (332105): create_clock -period 1.000 -name clk clk
+    Info (332105): create_clock -period 1.000 -name counter8421:one|qout[0] counter8421:one|qout[0]
+Info (332143): No user constrained clock uncertainty found in the design. Calling "derive_clock_uncertainty"
+Info (332123): Deriving Clock Uncertainty. Please refer to report_sdc in the Timing Analyzer to see clock uncertainties.
+Info: Found TIMING_ANALYZER_REPORT_SCRIPT_INCLUDE_DEFAULT_ANALYSIS = ON
+Info: Analyzing Slow 1000mV 85C Model
+Critical Warning (332148): Timing requirements not met
+    Info (11105): For recommendations on closing timing, run Report Timing Closure Recommendations in the Timing Analyzer.
+Info (332146): Worst-case setup slack is -1.989
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):    -1.989             -16.965 clk 
+    Info (332119):    -0.981              -3.806 counter8421:one|qout[0] 
+Info (332146): Worst-case hold slack is 0.417
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):     0.417               0.000 clk 
+    Info (332119):     0.940               0.000 counter8421:one|qout[0] 
+Info (332146): Worst-case recovery slack is -4.569
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):    -4.569             -17.081 clk 
+    Info (332119):    -2.142              -8.568 counter8421:one|qout[0] 
+Info (332146): Worst-case removal slack is 1.306
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):     1.306               0.000 counter8421:one|qout[0] 
+    Info (332119):     2.670               0.000 clk 
+Info (332146): Worst-case minimum pulse width slack is -3.000
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):    -3.000             -24.156 clk 
+    Info (332119):    -1.763              -7.052 counter8421:one|qout[0] 
+Info: Analyzing Slow 1000mV 0C Model
+Info (334003): Started post-fitting delay annotation
+Info (334004): Delay annotation completed successfully
+Info (332123): Deriving Clock Uncertainty. Please refer to report_sdc in the Timing Analyzer to see clock uncertainties.
+Critical Warning (332148): Timing requirements not met
+    Info (11105): For recommendations on closing timing, run Report Timing Closure Recommendations in the Timing Analyzer.
+Info (332146): Worst-case setup slack is -1.867
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):    -1.867             -16.168 clk 
+    Info (332119):    -0.930              -3.608 counter8421:one|qout[0] 
+Info (332146): Worst-case hold slack is 0.481
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):     0.481               0.000 clk 
+    Info (332119):     0.907               0.000 counter8421:one|qout[0] 
+Info (332146): Worst-case recovery slack is -4.368
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):    -4.368             -16.432 clk 
+    Info (332119):    -2.161              -8.644 counter8421:one|qout[0] 
+Info (332146): Worst-case removal slack is 1.365
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):     1.365               0.000 counter8421:one|qout[0] 
+    Info (332119):     2.660               0.000 clk 
+Info (332146): Worst-case minimum pulse width slack is -3.000
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):    -3.000             -24.156 clk 
+    Info (332119):    -1.763              -7.052 counter8421:one|qout[0] 
+Info: Analyzing Fast 1000mV 0C Model
+Info (332123): Deriving Clock Uncertainty. Please refer to report_sdc in the Timing Analyzer to see clock uncertainties.
+Critical Warning (332148): Timing requirements not met
+    Info (11105): For recommendations on closing timing, run Report Timing Closure Recommendations in the Timing Analyzer.
+Info (332146): Worst-case setup slack is -0.887
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):    -0.887              -6.467 clk 
+    Info (332119):    -0.109              -0.363 counter8421:one|qout[0] 
+Info (332146): Worst-case hold slack is 0.439
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):     0.439               0.000 clk 
+    Info (332119):     0.509               0.000 counter8421:one|qout[0] 
+Info (332146): Worst-case recovery slack is -2.249
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):    -2.249              -8.152 clk 
+    Info (332119):    -1.001              -4.004 counter8421:one|qout[0] 
+Info (332146): Worst-case removal slack is 0.923
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):     0.923               0.000 counter8421:one|qout[0] 
+    Info (332119):     1.404               0.000 clk 
+Info (332146): Worst-case minimum pulse width slack is -3.000
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):    -3.000             -24.156 clk 
+    Info (332119):    -1.763              -7.052 counter8421:one|qout[0] 
+Info (332102): Design is not fully constrained for setup requirements
+Info (332102): Design is not fully constrained for hold requirements
+Info: Quartus Prime Timing Analyzer was successful. 0 errors, 5 warnings
+    Info: Peak virtual memory: 4861 megabytes
+    Info: Processing ended: Wed Apr 13 11:59:02 2022
+    Info: Elapsed time: 00:00:02
+    Info: Total CPU time (on all processors): 00:00:02
+
+
