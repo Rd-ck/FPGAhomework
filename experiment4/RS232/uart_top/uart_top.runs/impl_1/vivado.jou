@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Vivado v2021.1 (64-bit)
+# SW Build 3247384 on Thu Jun 10 19:36:33 MDT 2021
+# IP Build 3246043 on Fri Jun 11 00:30:35 MDT 2021
+# Start of session at: Tue May 17 22:26:28 2022
+# Process ID: 3548
+# Current directory: G:/verilog/study/experiment4/RS232/uart_top/uart_top.runs/impl_1
+# Command line: vivado.exe -log uart_top.vdi -applog -product Vivado -messageDb vivado.pb -mode batch -source uart_top.tcl -notrace
+# Log file: G:/verilog/study/experiment4/RS232/uart_top/uart_top.runs/impl_1/uart_top.vdi
+# Journal file: G:/verilog/study/experiment4/RS232/uart_top/uart_top.runs/impl_1\vivado.jou
+#-----------------------------------------------------------
+source uart_top.tcl -notrace

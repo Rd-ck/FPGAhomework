@@ -1,0 +1,2 @@
+Info (10281): Verilog HDL Declaration information at uart_tx.v(4): object "CLK" differs only in case from object "clk" in the same scope File: G:/verilog/study/experiment4/uart_top/uart_tx.v Line: 4
+Info (10281): Verilog HDL Declaration information at uart_rx.v(4): object "CLK" differs only in case from object "clk" in the same scope File: G:/verilog/study/experiment4/uart_top/uart_rx.v Line: 4

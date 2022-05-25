@@ -1,0 +1,8 @@
+
+State Machine - |fsm2_seq10010|state
+Name state.Idle state.S1 state.S10 state.S100 state.S1001 
+state.Idle 0 0 0 0 0 
+state.S100 1 0 0 1 0 
+state.S10 1 0 1 0 0 
+state.S1 1 1 0 0 0 
+state.S1001 1 0 0 0 1 

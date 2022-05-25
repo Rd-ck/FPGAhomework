@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Vivado v2021.1 (64-bit)
+# SW Build 3247384 on Thu Jun 10 19:36:33 MDT 2021
+# IP Build 3246043 on Fri Jun 11 00:30:35 MDT 2021
+# Start of session at: Wed May 18 11:43:49 2022
+# Process ID: 8924
+# Current directory: G:/verilog/study/experiment4/uart/uart_top/uart_top.runs/synth_1
+# Command line: vivado.exe -log uart_top.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source uart_top.tcl
+# Log file: G:/verilog/study/experiment4/uart/uart_top/uart_top.runs/synth_1/uart_top.vds
+# Journal file: G:/verilog/study/experiment4/uart/uart_top/uart_top.runs/synth_1\vivado.jou
+#-----------------------------------------------------------
+source uart_top.tcl -notrace

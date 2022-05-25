@@ -1,0 +1,25 @@
+module clk_div(
+	input clk,
+	input clr,
+	output reg clk_out);
+	
+parameter freq=1000;
+localparam NUM='d100_000_000/(2*freq);
+
+reg[29:0]count;
+
+always @(posedge clk or negedge clr)begin
+	if(~clr)begin
+		clkout<=0;
+		count<=0;
+	end
+	else if(count==NUM-1)begin
+		count<=0;
+		clk_out<=~clk_out;
+	end
+	else
+		count<=count+1'b1;
+end
+
+endmodule
+

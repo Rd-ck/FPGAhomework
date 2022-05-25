@@ -1,0 +1,97 @@
+module uart_tx
+//========================< 参数 >==========================================
+#(
+parameter  CLK              = 50_000_000        , //系统时钟，50Mhz
+parameter  BPS              = 9600              , //波特率
+parameter  BPS_CNT          = CLK/BPS             //波特率计数
+)
+//========================< 端口 >==========================================
+(
+input   wire                clk                 , //时钟，50Mhz
+input   wire                rst_n               , //复位，低电平有效
+input   wire  [7:0]         din                 , //输入数据
+input   wire                din_vld             , //输入数据的有效指示
+output  reg                 dout                  //输出数据
+);
+//========================< 信号 >==========================================
+reg                         flag                ;
+reg   [ 7:0]                din_tmp             ;
+reg   [15:0]                cnt0                ;
+wire                        add_cnt0            ;
+wire                        end_cnt0            ;
+reg   [ 3:0]                cnt1                ;
+wire                        add_cnt1            ;
+wire                        end_cnt1            ;
+wire  [ 9:0]                data                ;
+
+//==========================================================================
+//==    数据暂存（din可能会消失，暂存住）
+//==========================================================================
+always @ (posedge clk or negedge rst_n) begin
+    if(!rst_n)
+        din_tmp <=8'd0;
+    else if(din_vld)
+        din_tmp <= din;
+end
+
+//==========================================================================
+//==    发送状态指示
+//==========================================================================
+always  @(posedge clk or negedge rst_n)begin
+    if(!rst_n)
+        flag <= 0;
+    else if(din_vld)
+        flag <= 1;
+    else if(end_cnt1)
+        flag <= 0;
+end
+
+//==========================================================================
+//==    波特率计数
+//==========================================================================
+always @(posedge clk or negedge rst_n) begin
+    if(!rst_n)
+        cnt0 <= 0;
+    else if(add_cnt0) begin
+        if(end_cnt0)
+            cnt0 <= 0;
+        else
+            cnt0 <= cnt0 + 1;
+    end
+end
+
+assign add_cnt0 = flag;
+assign end_cnt0 = cnt0== BPS_CNT-1 || end_cnt1;
+
+//==========================================================================
+//==    开始1位 + 数据8位 + 停止0.5位，共10位
+//==========================================================================
+always @(posedge clk or negedge rst_n) begin
+    if(!rst_n)
+        cnt1 <= 0;
+    else if(add_cnt1) begin
+        if(end_cnt1)
+            cnt1 <= 0;
+        else
+            cnt1 <= cnt1 + 1;
+    end
+end
+
+assign add_cnt1 = end_cnt0;
+assign end_cnt1 = cnt1==10-1 && cnt0==BPS_CNT/2-1;
+
+//==========================================================================
+//==    数据输出(用case语句也行)
+//==========================================================================
+assign data = {1'b1,din_tmp,1'b0};  //停止，数据，开始
+
+always @(posedge clk or negedge rst_n) begin
+    if(!rst_n)
+        dout <= 1'b1;
+    else if(flag)
+        dout <= data[cnt1];
+end
+
+
+
+endmodule

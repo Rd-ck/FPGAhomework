@@ -1,0 +1,14 @@
+|fsm2_seq10010
+seq => state.DATAB
+seq => Selector0.IN1
+seq => Selector1.IN0
+seq => b.DATAB
+seq => state.DATAB
+seq => state.DATAB
+clk => b~reg0.CLK
+clk => state~4.DATAIN
+rst => b~reg0.ACLR
+rst => state~6.DATAIN
+b <= b~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+

@@ -1,0 +1,11 @@
+transcript on
+if {[file exists rtl_work]} {
+	vdel -lib rtl_work -all
+}
+vlib rtl_work
+vmap work rtl_work
+
+vlog -vlog01compat -work work +incdir+G:/verilog/study/experiment4/uart_top {G:/verilog/study/experiment4/uart_top/uart_top.v}
+vlog -vlog01compat -work work +incdir+G:/verilog/study/experiment4/uart_top {G:/verilog/study/experiment4/uart_top/uart_tx.v}
+vlog -vlog01compat -work work +incdir+G:/verilog/study/experiment4/uart_top {G:/verilog/study/experiment4/uart_top/uart_rx.v}
+

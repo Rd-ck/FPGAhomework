@@ -1,0 +1,27 @@
+`timescale 1ns/1ps
+`define halfperiod 20
+
+module fsm2_seq10010_vlg_tst();
+reg clk,rst;
+reg [23:0]data;
+wire seq,b;
+
+assign seq = data[23];
+
+initial
+  begin
+    clk = 0;
+    rst = 1;
+    #2 rst = 0;
+    #30 rst = 1;
+    data = 20'b1100_1001_0000_1001_0100;   //data为24位，但只给了20位，前面的会自动补零。
+    #(`halfperiod * 1000)$stop;
+  end
+
+always #(`halfperiod) clk = ~clk;
+always @(posedge clk)
+         #2 data = {data[22:0],data[23]};
+
+fsm2_seq10010 m(.seq(seq), .clk(clk), .rst(rst), .b(b) );
+
+endmodule

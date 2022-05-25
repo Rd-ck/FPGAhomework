@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Vivado v2019.1 (64-bit)
+# SW Build 2552052 on Fri May 24 14:49:42 MDT 2019
+# IP Build 2548770 on Fri May 24 18:01:18 MDT 2019
+# Start of session at: Wed Apr 13 11:10:38 2022
+# Process ID: 10080
+# Current directory: G:/myfpga/nexys/three_eight
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent2132 G:\myfpga\nexys\three_eight\three_eight.xpr
+# Log file: G:/myfpga/nexys/three_eight/vivado.log
+# Journal file: G:/myfpga/nexys/three_eight\vivado.jou
+#-----------------------------------------------------------
+start_gui
