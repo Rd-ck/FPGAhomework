@@ -1,0 +1,54 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dG:/verilog/study/count/simulation/modelsim
+vcount4
+!s110 1649818535
+!i10b 1
+!s100 W`iBkEX0o_HTACHF;iChm0
+I[ClaQ^g;iITXdz`?TUPLB2
+Z1 VDg1SIo80bB@j0V0VzS_@n1
+R0
+w1644996910
+8G:/verilog/study/count/count4.v
+FG:/verilog/study/count/count4.v
+L0 1
+Z2 OV;L;10.5b;63
+r1
+!s85 0
+31
+!s108 1649818535.000000
+!s107 G:/verilog/study/count/count4.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+G:/verilog/study/count|G:/verilog/study/count/count4.v|
+!i113 1
+Z3 o-vlog01compat -work work
+!s92 -vlog01compat -work work +incdir+G:/verilog/study/count
+Z4 tCvgOpt 0
+vcount4_vlg_tst
+!s110 1649818536
+!i10b 1
+!s100 H9Ll<>on]]@hUHYB`N[X92
+IY^iG8>6iOCQooCh:L;H=z3
+R1
+R0
+w1644997625
+8G:/verilog/study/count/simulation/modelsim/count4.vt
+FG:/verilog/study/count/simulation/modelsim/count4.vt
+L0 28
+R2
+r1
+!s85 0
+31
+!s108 1649818536.000000
+!s107 G:/verilog/study/count/simulation/modelsim/count4.vt|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+G:/verilog/study/count/simulation/modelsim|G:/verilog/study/count/simulation/modelsim/count4.vt|
+!i113 1
+R3
+!s92 -vlog01compat -work work +incdir+G:/verilog/study/count/simulation/modelsim
+R4
